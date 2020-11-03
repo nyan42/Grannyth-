@@ -819,10 +819,10 @@ table.alt tbody tr td {
     -ms-flex-grow: 0;
     flex-grow: 0; }
   .testimonials > * {
-    width: 33.3333333333%; }
+    width: 100%; }
   .testimonials > * {
     padding: 1.5rem;
-    width: calc(33.3333333333% + 1rem); }
+    width: calc(100%); }
   .testimonials > :nth-child(-n + 3) {
     padding-top: 0; }
   .testimonials > :nth-last-child(-n + 3) {
@@ -833,7 +833,7 @@ table.alt tbody tr td {
     padding-right: 0; }
   .testimonials > :nth-child(3n + 1),
   .testimonials > :nth-child(3n) {
-    width: calc(33.3333333333% + -0.5rem); }
+    width: calc(100%); }
   .testimonials .content {
     border-radius: 4px;
     height: 100%;
@@ -866,7 +866,7 @@ table.alt tbody tr td {
       width: 50%; }
     .testimonials > * {
       padding: 1rem;
-      width: calc(33.3333333333% + 0.6666666667rem); }
+      width: calc(100%); }
     .testimonials > :nth-child(-n + 3) {
       padding-top: 1rem; }
     .testimonials > :nth-last-child(-n + 3) {
@@ -900,7 +900,7 @@ table.alt tbody tr td {
       width: 100%; }
     .testimonials > * {
       padding: 1rem;
-      width: calc(33.3333333333% + 0.6666666667rem); }
+      width: calc(100%); }
     .testimonials > :nth-child(-n + 3) {
       padding-top: 1rem; }
     .testimonials > :nth-last-child(-n + 3) {
@@ -912,7 +912,7 @@ table.alt tbody tr td {
     .testimonials > :nth-child(3n + 1),
     .testimonials > :nth-child(3n) {
       padding: 1rem;
-      width: calc(100% + 2rem); }
+      width: calc(100%); }
     .testimonials > * {
       padding: 1rem;
       width: calc(50% + 1rem); }
@@ -927,10 +927,10 @@ table.alt tbody tr td {
     .testimonials > :nth-child(2n + 1),
     .testimonials > :nth-child(2n) {
       padding: 1rem;
-      width: calc(100% + 2rem); }
+      width: calc(100%); }
     .testimonials > * {
       padding: 1rem;
-      width: calc(100% + 2rem); }
+      width: calc(100%); }
     .testimonials > :nth-child(-n + 1) {
       padding-top: 0; }
     .testimonials > :nth-last-child(-n + 1) {
