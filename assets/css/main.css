@@ -20,6 +20,18 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+
+.comment {
+  margin-left : 30%;
+  margin-right: 30%;
+}
+
+
+
+
+
+
+
 body {
   background: #ffffff; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {

@@ -64,8 +64,23 @@ setcookie('pass_hache', ''); ?>
 		</div>
 	</section>
 
+	<section class="comment">
 
 
+		<h3>Poster un projet</h3>
+		<form method="post" action="http://localhost/template/index.php?>">
+			<input type="hidden" name="action" value="poster-commentaire" />
+			<p>Commentaire<br /><textarea name="commentaire"></textarea></p>
+			<p>Nom<br /><input type="text" name="nom" /></p>
+			<p>Lien de la photo<br /><input type="text" name="photo" /></p>
+			<p>Adresse e-mail<br /><input type="text" name="email" class="hidden" />
+				<p><input type="submit" class="button-blue left" value="Poster mon commentaire" /></p>
+				<div class="clear"></div>
+				<p class="red right">Votre adresse e-mail n'est pas publiée lorsque vous ajoutez un commentaire.</p>
+				<div class="clear"></div>
+		</form>
+
+	</section>
 	<!-- Testimonials -->
 	<section class="wrapper">
 		<div class="inner">
@@ -174,6 +189,23 @@ setcookie('pass_hache', ''); ?>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$('.repondre').click(function() {
+			var id = $(this).attr('data-rel');
+			if ($('#comform-div-' + id).hasClass('hidden')) {
+				$('.repondre').removeClass('button-blue');
+				$(this).addClass('button-blue').css('float', 'left');
+				$('.comform-div').addClass('hidden');
+				$('#comform-div-' + id).find('p').show();
+				$('#comform-div-' + id).removeClass('hidden');
+				return false;
+			} else {
+				$('#comform-' + id).submit();
+				return false;
+			}
+		});
+	</script>
 
 </body>
 
