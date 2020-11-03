@@ -1,13 +1,4 @@
-<?php
-session_start();
-
-// Suppression des variables de session et de la session
-$_SESSION = array();
-session_destroy();
-
-// Suppression des cookies de connexion automatique
-setcookie('login', '');
-setcookie('pass_hache', ''); ?>
+<?php include('server.php') ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -59,7 +50,7 @@ setcookie('pass_hache', ''); ?>
 				<p> Le monde de demain ne demande que vous</p>
 			</header>
 			<div class="highlights">
-				<a href=""> Connexion </a><a href=""> Inscription </a>
+				<a href="registration/"> Connexion </a><a href="registration/register.php"> Inscription </a>
 			</div>
 		</div>
 	</section>
