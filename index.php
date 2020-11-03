@@ -1,13 +1,19 @@
+<?php
+session_start();
+
+// Suppression des variables de session et de la session
+$_SESSION = array();
+session_destroy();
+
+// Suppression des cookies de connexion automatique
+setcookie('login', '');
+setcookie('pass_hache', ''); ?>
+
 <!DOCTYPE HTML>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 
 <head>
-	<title>Industrious by TEMPLATED</title>
+	<title>Grannythé</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
@@ -19,7 +25,7 @@
 
 	<!-- Header -->
 	<header id="header">
-		<a class="logo" href="index.html">Industrious</a>
+		<a class="logo" href="index.php">Grannythé</a>
 		<nav>
 			<a href="#menu">Menu</a>
 		</nav>
@@ -28,16 +34,16 @@
 	<!-- Nav -->
 	<nav id="menu">
 		<ul class="links">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="elements.html">Elements</a></li>
-			<li><a href="generic.html">Generic</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="elements.php">Elements</a></li>
+			<li><a href="generic.php">Generic</a></li>
 		</ul>
 	</nav>
 
 	<!-- Banner -->
 	<section id="banner">
 		<div class="inner">
-			<h1>Industrious</h1>
+			<h1>Grannythé</h1>
 			<p>A responsive business oriented template with a video background<br />
 				designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons
 				License.</p>
@@ -53,7 +59,7 @@
 				<p> Le monde de demain ne demande que vous</p>
 			</header>
 			<div class="highlights">
-					<a href=""> Connexion </a><a href=""> Inscription </a>
+				<a href=""> Connexion </a><a href=""> Inscription </a>
 			</div>
 		</div>
 	</section>
@@ -157,8 +163,7 @@
 				</section>
 			</div>
 			<div class="copyright">
-				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-					href="https://coverr.co">Coverr</a>.
+				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
 			</div>
 		</div>
 	</footer>

@@ -696,7 +696,7 @@ table.alt tbody tr td {
   .highlights > :nth-child(3n) {
     padding-right: 0; }
   .highlights > :nth-child(3n + 1),
-  .highlights > :nth-child(3n) {
+  .highlights > :nth-child(3n) {  
     width: calc(33.3333333333% + -0.5rem); }
   .highlights .content {
     border-radius: 4px;
