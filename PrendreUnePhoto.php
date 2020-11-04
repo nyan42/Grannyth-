@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Generic Page - SmartCityzen - copyright</title>
+	<title>Prendre une photo</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
@@ -29,14 +29,12 @@
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="index.php">Home</a></li>
-			<li><a href="elements.php">Elements</a></li>
-			<li><a href="generic.php">Generic</a></li>
 		</ul>
 	</nav>
 
 	<!-- Heading -->
 	<div id="heading">
-		<h1>Generic Page</h1>
+		<h1>Prendre une photo</h1>
 	</div>
 
 	<!-- Main -->

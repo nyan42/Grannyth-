@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+	$isconnected = 0;
+	$username = "";
+} else {
+	$isconnected = 1;
+	$username = $_SESSION['username'];
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -24,8 +37,6 @@
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="index.php">Home</a></li>
-			<li><a href="elements.php">Elements</a></li>
-			<li><a href="generic.php">Generic</a></li>
 		</ul>
 	</nav>
 
@@ -33,9 +44,8 @@
 	<section id="banner">
 		<div class="inner">
 			<h1>SmartCityzen</h1>
-			<p>A responsive business oriented template with a video background<br />
-				designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons
-				License.</p>
+			<p>Une application utilisant la réalité augmentée pour embellir votre ville<br />
+				Créer pour le Workshop 2020 des B3</p>
 		</div>
 		<video autoplay loop muted playsinline src="images/banner.mp4"></video>
 	</section>
@@ -43,44 +53,61 @@
 	<!-- Highlights -->
 	<section class="wrapper">
 		<div class="inner">
-			<header class="special">
-				<h2>Connectez-vous pour voter ou publier</h2>
-				<p> Le monde de demain ne demande que vous</p>
-			</header>
-			<div class="ImageTrois">
-				<div class="textfacile">
-					<a href="registration/"> Connexion </a>
+			<?php
+
+
+			if ($isconnected == 1) { ?>
+				<header class="special">
+					<h2><?php echo $username . " : Vous êtes connecté</h2>"; ?>
+						<p> Publiez dès maintenant votre projet</p>
+				</header>
+				<div class="ImageTrois">
+					<div class="textfacile">
+						<a href="registration/index.php?logout='1'"> Déconnexion </a>
+					</div>
 				</div>
-				<div class="textfacile">
-					<a href="registration/register.php"> Inscription </a>
+			<?php } else { ?>
+				<header class="special">
+					<h2>Connectez-vous pour voter ou publier</h2>
+					<p> Le monde de demain ne demande que vous</p>
+				</header>
+				<div class="ImageTrois">
+					<div class="textfacile">
+						<a href="registration/"> Connexion </a>
+					</div>
+					<div class="textfacile">
+						<a href="registration/register.php"> Inscription </a>
+					</div>
 				</div>
-			</div>
+			<?php } ?>
 
 			</br></br>
 
-			<div class="ImageTrois">
-				<div class="textfacile">
-					<a href="PrendreUnePhoto.php">Prendre une photo </a>
+			<?php if ($isconnected == 1) { ?>
+				<div class="ImageTrois">
+					<div class="textfacile">
+						<a href="PrendreUnePhoto.php">Prendre une photo </a>
+					</div>
+					<div class="textfacile">
+						<a href="post.php"> Poster un projet </a>
+					</div>
+					<div class="textfacile">
+						<a href="publication.php"> Voir les projets existants </a>
+					</div>
 				</div>
-				<div class="textfacile">
-					<a href="post.php"> Poster un projet </a>
-				</div>
-				<div class="textfacile">
-				<a href="publication.php"> Voir les projets existants </a>
-				</div>
-			</div>
 
-			<div class="ImageTrois">
-				<div class="textfacile">
-					<img src="images/PrendreEnPhoto.jpg">
+				<div class="ImageTrois">
+					<div class="textfacile">
+						<img src="images/PrendreEnPhoto.jpg">
+					</div>
+					<div class="textfacile">
+						<img src="images/pic03.jpg">
+					</div>
+					<div class="textfacile">
+						<img src="images/pic03.jpg">
+					</div>
 				</div>
-				<div class="textfacile">
-					<img src="images/pic03.jpg">
-				</div>
-				<div class="textfacile">
-					<img src="images/pic03.jpg">
-				</div>
-			</div>
+			<?php } ?>
 		</div>
 	</section>
 
@@ -88,49 +115,46 @@
 	<section class="wrapper">
 		<div class="inner">
 			<header class="special">
-				<h2>Nos demandes de projets</h2>
-				<p>Votez pour les projets que vous désirez voir dans votre ville</p>
+				<h2>Les projets qui ont vu déjà le jour</h2>
+				<p>Ces projets ont réussi à apparaitre dans les villes grace à votre aide</p>
 			</header>
 			<div class="testimonials">
 				<section>
 					<div class="content">
 						<blockquote>
-							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
-								non mi integer non faucibus.</p>
+							<p>Roubaix - Création d'un skatepark à l'angle de Road Street avenue.</p>
 						</blockquote>
 						<div class="author">
 							<div class="image">
-								<img src="images/pic01.jpg" alt="" />
+								<img src="images/skatepark.jpg" alt="skatepark" />
 							</div>
-							<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+							<p class="credit">- <strong>Michael J. Johnson</strong> <span>Maire de Roubaix</span></p>
 						</div>
 					</div>
 				</section>
 				<section>
 					<div class="content">
 						<blockquote>
-							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
-								non mi integer non faucibus.</p>
+							<p>Villeneuve d'Ascq - Restauration d'un abri-bus.</p>
 						</blockquote>
 						<div class="author">
 							<div class="image">
-								<img src="images/pic03.jpg" alt="" />
+								<img src="images/abribus.jpg" alt="abribus" />
 							</div>
-							<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
+							<p class="credit">- <strong>John Fidjeralt Kronembourg</strong> <span>Adjointe au Maire.</span></p>
 						</div>
 					</div>
 				</section>
 				<section>
 					<div class="content">
 						<blockquote>
-							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
-								non mi integer non faucibus.</p>
+							<p>Douai - Organisation d'un festival de pétanque inter-âge.</p>
 						</blockquote>
 						<div class="author">
 							<div class="image">
-								<img src="images/pic02.jpg" alt="" />
+								<img src="images/petanque.jpg" alt="petanque" />
 							</div>
-							<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
+							<p class="credit">- <strong>Bob Ralowski</strong> <span>Président du club sportif.</span></p>
 						</div>
 					</div>
 				</section>
@@ -140,12 +164,10 @@
 	<!-- CTA -->
 	<section id="cta" class="wrapper">
 		<div class="inner">
-			<h2>Curabitur ullamcorper ultricies</h2>
-			<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
-				faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan
-				varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus
-				vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer
-				ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+			<h2>Le futur n'attend que vous</h2>
+			<p>Nos partenariats, nos projets, tout cela n'est possible qu'à l'aide de vous.
+				Avec déjà plus de 10000 projets réalisés partout en France, notre ambition de 
+				se propager dans d'autres pays est de plus en plus grande.</p>
 		</div>
 	</section>
 
