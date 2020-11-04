@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>Grannythé</title>
+	<title>SmartCityzen</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
@@ -16,7 +16,7 @@
 
 	<!-- Header -->
 	<header id="header">
-		<a class="logo" href="index.php">Grannythé</a>
+		<a class="logo" href="index.php">SmartCityzen</a>
 		<nav>
 			<a href="#menu">Menu</a>
 		</nav>
