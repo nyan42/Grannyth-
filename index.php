@@ -63,10 +63,10 @@
 					<a href="PrendreUnePhoto.php">Prendre une photo </a>
 				</div>
 				<div class="textfacile">
-					<a href="post.php/"> Poster un projet </a>
+					<a href="post.php"> Poster un projet </a>
 				</div>
 				<div class="textfacile">
-				<a href="publication.php/"> Voir les projets existants </a>
+				<a href="publication.php"> Voir les projets existants </a>
 				</div>
 			</div>
 
