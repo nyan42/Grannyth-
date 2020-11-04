@@ -54,8 +54,31 @@
 				<div class="textfacile">
 					<a href="registration/register.php"> Inscription </a>
 				</div>
+			</div>
+
+			</br></br>
+
+			<div class="ImageTrois">
+				<div class="textfacile">
+					<a href="PrendreUnePhoto.php">Prendre une photo </a>
+				</div>
 				<div class="textfacile">
 					<a href="post.php/"> Poster un projet </a>
+				</div>
+				<div class="textfacile">
+					Voir les projets existants
+				</div>
+			</div>
+
+			<div class="ImageTrois">
+				<div class="textfacile">
+					<img src="images/PrendreEnPhoto.jpg">
+				</div>
+				<div class="textfacile">
+					<img src="images/pic03.jpg">
+				</div>
+				<div class="textfacile">
+					<img src="images/pic03.jpg">
 				</div>
 			</div>
 		</div>
