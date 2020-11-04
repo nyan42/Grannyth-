@@ -59,31 +59,20 @@
 <?php
 session_start();
 
+require("bdd/dbSet.php");
 if (isset($_SESSION['username'])){
     $username = $_SESSION['username'];
 }
-require("bdd/dbSet.php");
+echo $username;
 
-/*
-$sqlinfos = "SELECT nom, adr, cp, ville FROM reservation WHERE num = '$numreservation'";
-                          $requete= $conn->query($sqlinfos);
 
-                          // permet d'afficher les données d'une seule et même réservation
-                          while ($resultat = $requete->fetch()){
-                            $infoNom = $resultat['nom'];
-                            $infoAdr = $resultat['adr'];
-                            $infoCp = $resultat['cp'];
-                            $infoVille = $resultat['ville'];
-                          }
-                          echo $infoNom.' '.$infoAdr.' '.$infoCp.' '.$infoVille;
-*/
 				if (isset($_POST['reg_posts'])) {
 					// receive all input values from the form
 					$commentaire = mysqli_real_escape_string($db, $_POST['commentaire']);
-					$photo = mysqli_real_escape_string($db, $_POST['photo']);
+                    $photo = mysqli_real_escape_string($db, $_POST['photo']);
 
 					$query = "INSERT INTO posts (photo, commentaire, email) 
-           VALUES('$photo', '$commentaire', '$username')";
+                    VALUES ('$photo', '$commentaire', '$username')";
 					mysqli_query($db, $query);
 				}
 
@@ -132,6 +121,5 @@ $sqlinfos = "SELECT nom, adr, cp, ville FROM reservation WHERE num = '$numreserv
 	<script src="assets/js/main.js"></script>
 
 </body>
->>>>>>> e68416b5870267b927bedb2301a5839ae8523455
 
 </html>

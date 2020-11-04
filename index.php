@@ -84,16 +84,6 @@ if (!isset($_SESSION['username'])) {
 			</br></br>
 
 			<?php if ($isconnected == 1) { ?>
-				<header class="special">
-					<h2><?php echo $username . " : Vous êtes connecté</h2>"; ?>
-						<p> Publiez dès maintenant votre projet</p>
-				</header>
-				<div class="ImageTrois">
-					<div class="textfacile">
-						<a href="registration/index.php?logout='1'"> Déconnexion </a>
-					</div>
-				</div>
-
 				<div class="ImageTrois">
 					<div class="textfacile">
 						<a href="PrendreUnePhoto.php">Prendre une photo </a>
