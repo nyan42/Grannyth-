@@ -96,7 +96,7 @@ if (!isset($_SESSION['username'])) {
 						<a href="post.php"> Poster un projet </a>
 					</div>
 					<div class="textfacile">
-						<a href="#"> Voir les projets existants </a>
+						<a href="publicationGeneral.php"> Voir les projets existants </a>
 					</div>
 				</div>
 
@@ -108,7 +108,7 @@ if (!isset($_SESSION['username'])) {
 						<a href="post.php"><img src="images/projet.jpg"></a>
 					</div>
 					<div class="textfacile">
-						<a href="#"><img src="images/bond.jpg"></a>
+						<a href="publicationGeneral.php"><img src="images/bond.jpg"></a>
 					</div>
 				</div>
 			<?php } ?>
