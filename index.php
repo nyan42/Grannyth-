@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Grannythé</title>
+	<title>SmartCityzen</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
@@ -14,7 +14,7 @@
 
 	<!-- Header -->
 	<header id="header">
-		<a class="logo" href="index.php">Grannythé</a>
+		<a class="logo" href="index.php">SmartCityzen</a>
 		<nav>
 			<a href="#menu">Menu</a>
 		</nav>
@@ -32,7 +32,7 @@
 	<!-- Banner -->
 	<section id="banner">
 		<div class="inner">
-			<h1>Grannythé</h1>
+			<h1>SmartCityzen</h1>
 			<p>A responsive business oriented template with a video background<br />
 				designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons
 				License.</p>
@@ -54,11 +54,31 @@
 				<div class="textfacile">
 					<a href="registration/register.php"> Inscription </a>
 				</div>
+			</div>
+
+			</br></br>
+
+			<div class="ImageTrois">
+				<div class="textfacile">
+					<a href="PrendreUnePhoto.php">Prendre une photo </a>
+				</div>
 				<div class="textfacile">
 					<a href="post.php/"> Poster un projet </a>
 				</div>
 				<div class="textfacile">
-					<a href="publication.php/"> Voir les projets </a>
+				<a href="publication.php/"> Voir les projets existants </a>
+				</div>
+			</div>
+
+			<div class="ImageTrois">
+				<div class="textfacile">
+					<img src="images/PrendreEnPhoto.jpg">
+				</div>
+				<div class="textfacile">
+					<img src="images/pic03.jpg">
+				</div>
+				<div class="textfacile">
+					<img src="images/pic03.jpg">
 				</div>
 			</div>
 		</div>
