@@ -23,6 +23,16 @@ body {
   }
 }
 
+.ImageTrois {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+}
+
+.textfacile{
+margin : auto;
+}
+
 html {
   box-sizing: border-box;
 }

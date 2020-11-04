@@ -47,11 +47,16 @@
 				<h2>Connectez-vous pour voter ou publier</h2>
 				<p> Le monde de demain ne demande que vous</p>
 			</header>
-			<div class="highlights">
-				<a href="registration/"> Connexion </a><a href="registration/register.php"> Inscription </a>
-			</div>
-			<div class="highlights">
-				<a href="post.php/"> Poster un projet </a>
+			<div class="ImageTrois">
+				<div class="textfacile">
+					<a href="registration/"> Connexion </a>
+				</div>
+				<div class="textfacile">
+					<a href="registration/register.php"> Inscription </a>
+				</div>
+				<div class="textfacile">
+					<a href="post.php/"> Poster un projet </a>
+				</div>
 			</div>
 		</div>
 	</section>
