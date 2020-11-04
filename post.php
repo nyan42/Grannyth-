@@ -14,6 +14,8 @@
 <?php
 require ("bdd/dbSet.php");
 
+
+
 if (isset($_POST['reg_posts'])) {
     // receive all input values from the form
     $commentaire = mysqli_real_escape_string($db, $_POST['commentaire']);
@@ -23,8 +25,6 @@ if (isset($_POST['reg_posts'])) {
     $query = "INSERT INTO posts (photo, commentaire, email) 
            VALUES('$photo', '$commentaire', '$email')";
     mysqli_query($db, $query);
-
-    }
 }
 
 ?>
