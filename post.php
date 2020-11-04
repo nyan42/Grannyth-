@@ -14,7 +14,7 @@
 session_start();
 
 if (isset($_SESSION['username'])){
-    $test = $_SESSION['username'];
+    $username = $_SESSION['username'];
 }
 require("bdd/dbSet.php");
 /*
@@ -36,7 +36,7 @@ if (isset($_POST['reg_posts'])) {
 	$photo = mysqli_real_escape_string($db, $_POST['photo']);
 
 	$query = "INSERT INTO posts (photo, commentaire, email) 
-           VALUES('$photo', '$commentaire', '$test')";
+           VALUES('$photo', '$commentaire', '$username')";
 	mysqli_query($db, $query);
 }
 

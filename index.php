@@ -57,6 +57,9 @@
 				<div class="textfacile">
 					<a href="post.php/"> Poster un projet </a>
 				</div>
+				<div class="textfacile">
+					<a href="publication.php/"> Voir les projets </a>
+				</div>
 			</div>
 		</div>
 	</section>
