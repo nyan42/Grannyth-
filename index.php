@@ -1,5 +1,3 @@
-<?php include('server.php') ?>
-
 <!DOCTYPE HTML>
 <html>
 
@@ -52,26 +50,12 @@
 			<div class="highlights">
 				<a href="registration/"> Connexion </a><a href="registration/register.php"> Inscription </a>
 			</div>
+			<div class="highlights">
+				<a href="post.php/"> Poster un projet </a>
+			</div>
 		</div>
 	</section>
 
-	<section class="comment">
-
-
-		<h3>Poster un projet</h3>
-		<form method="post" action="http://localhost/template/index.php?>">
-			<input type="hidden" name="action" value="poster-commentaire" />
-			<p>Commentaire<br /><textarea name="commentaire"></textarea></p>
-			<p>Nom<br /><input type="text" name="nom" /></p>
-			<p>Lien de la photo<br /><input type="text" name="photo" /></p>
-			<p>Adresse e-mail<br /><input type="text" name="email" class="hidden" />
-				<p><input type="submit" class="button-blue left" value="Poster mon commentaire" /></p>
-				<div class="clear"></div>
-				<p class="red right">Votre adresse e-mail n'est pas publiée lorsque vous ajoutez un commentaire.</p>
-				<div class="clear"></div>
-		</form>
-
-	</section>
 	<!-- Testimonials -->
 	<section class="wrapper">
 		<div class="inner">

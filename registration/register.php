@@ -44,6 +44,20 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="inputPassword4">Adress</label>
+						<input type="text" class="form-control" id="adress" name="adress">
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="city">City</label>
+							<input type="text" name="city" class="form-control" id="city">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="cp">Postal Code</label>
+							<input type="number" class="form-control" id="cp" name="cp">
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="inputPassword4">Password</label>
 						<input type="password" class="form-control" id="inputPassword4" name="password_1">
 					</div>
