@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <!--
-	Industrious by TEMPLATED
+	SmartCityzen - copyright
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
 
 <head>
-	<title>Generic Page - Industrious by TEMPLATED</title>
+	<title>Generic Page - SmartCityzen - copyright</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
@@ -19,7 +19,7 @@
 
 	<!-- Header -->
 	<header id="header">
-		<a class="logo" href="index.php">Industrious</a>
+		<a class="logo" href="index.php">SmartCityzen</a>
 		<nav>
 			<a href="#menu">Menu</a>
 		</nav>
