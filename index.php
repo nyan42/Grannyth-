@@ -101,10 +101,10 @@ if (!isset($_SESSION['username'])) {
 						<img src="images/PrendreEnPhoto.jpg">
 					</div>
 					<div class="textfacile">
-						<img src="images/pic03.jpg">
+						<img src="images/projet.jpg">
 					</div>
 					<div class="textfacile">
-						<img src="images/pic03.jpg">
+						<img src="images/bond.jpg">
 					</div>
 				</div>
 			<?php } ?>

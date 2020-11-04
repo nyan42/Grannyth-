@@ -54,6 +54,8 @@
 		</div>
 		<div class="clear"></div>
 		<div class="clear"></div>
+		<a href="./index.php"> Retour </div> </a>
+
 </form>
 
 <?php
@@ -63,7 +65,6 @@ require("bdd/dbSet.php");
 if (isset($_SESSION['username'])){
     $username = $_SESSION['username'];
 }
-echo $username;
 
 
 				if (isset($_POST['reg_posts'])) {
