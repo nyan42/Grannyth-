@@ -50,7 +50,7 @@
 					<div class="textfacile">
 						<a href="./index.php"> Retour </div> </a>
 					<div class="textfacile">
-						<a href="post.php/"> Publier la photo </a>
+						<a href="post.php"> Publier la photo </a>
 					</div>
 				</div>
 			</div>

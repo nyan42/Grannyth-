@@ -65,6 +65,10 @@ if (!isset($_SESSION['username'])) {
 					<div class="textfacile">
 						<a href="registration/index.php?logout='1'"> Déconnexion </a>
 					</div>
+
+					<div class="textfacile">
+						<a href="publication.php"> Mes projets </a>
+					</div>
 				</div>
 			<?php } else { ?>
 				<header class="special">
@@ -92,19 +96,19 @@ if (!isset($_SESSION['username'])) {
 						<a href="post.php"> Poster un projet </a>
 					</div>
 					<div class="textfacile">
-						<a href="publication.php"> Voir les projets existants </a>
+						<a href="#"> Voir les projets existants </a>
 					</div>
 				</div>
 
 				<div class="ImageTrois">
 					<div class="textfacile">
-						<img src="images/PrendreEnPhoto.jpg">
+						<a href="PrendreUnePhoto.php"><img src="images/PrendreEnPhoto.jpg"></a>
 					</div>
 					<div class="textfacile">
-						<img src="images/projet.jpg">
+						<a href="post.php"><img src="images/projet.jpg"></a>
 					</div>
 					<div class="textfacile">
-						<img src="images/bond.jpg">
+						<a href="#"><img src="images/bond.jpg"></a>
 					</div>
 				</div>
 			<?php } ?>
@@ -166,7 +170,7 @@ if (!isset($_SESSION['username'])) {
 		<div class="inner">
 			<h2>Le futur n'attend que vous</h2>
 			<p>Nos partenariats, nos projets, tout cela n'est possible qu'à l'aide de vous.
-				Avec déjà plus de 10000 projets réalisés partout en France, notre ambition de 
+				Avec déjà plus de 10000 projets réalisés partout en France, notre ambition de
 				se propager dans d'autres pays est de plus en plus grande.</p>
 		</div>
 	</section>
