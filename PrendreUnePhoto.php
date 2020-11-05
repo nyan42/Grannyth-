@@ -56,18 +56,18 @@
 			</div>
 		</div>
 	</section>-->
-    <section class="prendre_photo" id="main">
-        <a href="./index.php">
-            <img src="images/flecheRetour.png" class="img_retour"/>
-        </a>
-        <div>
-            <input type="image" id="avatar" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png"/>
-        </div>
-        <div>
+	<section class="prendre_photo" id="main">
+		<a href="./index.php">
+			<img src="images/flecheRetour.png" class="img_retour" />
+		</a>
+		<div>
+			<input type="image" id="avatar" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" />
+		</div>
+		<div>
 
-            <a href="post.php" class="button_CTA"> Publier la photo </a>
-        </div>
-    </section>
+			<a href="post.php" class="button_CTA"> Publier la photo </a>
+		</div>
+	</section>
 
 	<!-- Footer -->
 	<!--<footer id="footer">

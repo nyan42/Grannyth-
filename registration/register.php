@@ -21,30 +21,30 @@
 </head>
 
 <body class="is-preload">
-<div id="root">
-    <div>
-	<!-- Header -->
-	<header id="header">
-		<a class="logo" href="../index.php">SmartCityzen</a>
-		<nav>
-			<a href="#menu">Menu</a>
-		</nav>
-	</header>
+	<div id="root">
+		<div>
+			<!-- Header -->
+			<header id="header">
+				<a class="logo" href="../index.php">SmartCityzen</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
 
-	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="../index.php">Home</a></li>
-		</ul>
-	</nav>
+			<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../index.php">Home</a></li>
+				</ul>
+			</nav>
 
-	<!-- Heading -->
-	<!--<div id="heading">
+			<!-- Heading -->
+			<!--<div id="heading">
 		<h1>Inscription</h1>
 	</div>-->
 
-	<!-- Main -->
-	<!--<section id="main" class="wrapper">
+			<!-- Main -->
+			<!--<section id="main" class="wrapper">
 		<div class="inner">
 
 
@@ -109,49 +109,49 @@
 			</div>
 	</section>-->
 
-    <section class="register">
-        <div class="buttons_loginregister">
-            <a href="login.php"> Connexion </a>
-            <a href="register.php" class="button_switch"> Inscription </a>
-        </div>
-        <div>
-            <p class="info_register"> Veuillez remplir les informations suivantes afin de créer votre compte. </p>
-            <form method="post" action="register.php">
-                <?php include('errors.php'); ?>
+			<section class="register">
+				<div class="buttons_loginregister">
+					<a href="login.php"> Connexion </a>
+					<a href="register.php" class="button_switch"> Inscription </a>
+				</div>
+				<div>
+					<p class="info_register"> Veuillez remplir les informations suivantes afin de créer votre compte. </p>
+					<form method="post" action="register.php">
+						<?php include('errors.php'); ?>
 
-                <div class="form_group">
-                    <input type="text" name="username" class="input_form" id="Username" value="<?php echo $username; ?>" placeholder="Username*"/>
-                </div>
+						<div class="form_group">
+							<input type="text" name="username" class="input_form" id="Username" value="<?php echo $username; ?>" placeholder="Username*" />
+						</div>
 
-                <div class="form_group">
-                    <input type="email" class="input_form" id="mail" name="email" value="<?php echo $email; ?>" placeholder="Email*"/>
-                </div>
+						<div class="form_group">
+							<input type="email" class="input_form" id="mail" name="email" value="<?php echo $email; ?>" placeholder="Email*" />
+						</div>
 
-                <div class="form_group2">
-                   <input type="number" class="input_form" id="cp" name="cp" placeholder="Code postal*"/>
-                    <input type="text" name="city" class="input_form" id="city" placeholder="Ville*"/>
-                </div>
+						<div class="form_group2">
+							<input type="number" class="input_form" id="cp" name="cp" placeholder="Code postal*" />
+							<input type="text" name="city" class="input_form" id="city" placeholder="Ville*" />
+						</div>
 
-                <div class="form_group">
-                    <input type="password" class="input_form" id="inputPassword4" name="password_1" placeholder="Mot de passe*"/>
-                </div>
+						<div class="form_group">
+							<input type="password" class="input_form" id="inputPassword4" name="password_1" placeholder="Mot de passe*" />
+						</div>
 
-                <div class="form_group">
-                    <input type="password" class="input_form" id="inputPassword4" name="password_2" placeholder="Confirmation mot de passe*"/>
-                </div>
+						<div class="form_group">
+							<input type="password" class="input_form" id="inputPassword4" name="password_2" placeholder="Confirmation mot de passe*" />
+						</div>
 
-                <p class="info_age"> En cliquant sur "S'inscrire", vous confirmez que vous êtes âgé de plus de 16 ans.</p>
-                <p class="info_etoile"> *Informations obligatoires</p>
-                <div class="form_group_validate">
-                    <button type="submit" class="button_form_loginregister" name="reg_user"> S'inscrire</button>
-                </div>
+						<p class="info_age"> En cliquant sur "S'inscrire", vous confirmez que vous êtes âgé de plus de 16 ans.</p>
+						<p class="info_etoile"> *Informations obligatoires</p>
+						<div class="form_group_validate">
+							<button type="submit" class="button_form_loginregister" name="reg_user"> S'inscrire</button>
+						</div>
 
-            </form>
-        </div>
-    </section>
+					</form>
+				</div>
+			</section>
 
-	<!-- Footer -->
-	<!--<footer id="footer">
+			<!-- Footer -->
+			<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -182,8 +182,8 @@
 			</div>
 		</div>
 	</footer>-->
-    </div>
-</div>
+		</div>
+	</div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
