@@ -514,7 +514,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   font-size: 0.9rem;
-  padding-bottom: 0.1vh;
+  padding-bottom: 1vh;
 }
 
 .listePublications_ville h2{
@@ -596,6 +596,14 @@ html {
   color: white;
   text-align: center;
   margin-top: 3vh;
+}
+
+.descStatut{
+  color: black;
+  font-size: 1.1rem;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 /*erreurs*/

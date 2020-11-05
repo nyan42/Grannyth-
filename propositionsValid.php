@@ -47,47 +47,29 @@
 
             <h2> Propositions validées</h2>
             <p class="descValid"> Retrouvez toutes les propositions validées de votre ville ainsi que leur statut.</p>
-
-            <div class="testimonials">
-                <section>
-                    <div class="content">
-                        <blockquote>
-                            <p>Roubaix - Création d'un skatepark à l'angle de Road Street avenue.</p>
-                        </blockquote>
-                        <div class="author">
-                            <div class="image">
-                                <img src="images/skatepark.jpg" alt="skatepark" />
-                            </div>
-                            <p class="credit">- <strong>Michael J. Johnson</strong> <span>Maire de Roubaix</span></p>
+            <div class="listePublications">
+                <div class="card_publi">
+                    <img src="images/skatepark.jpg" class="card_img" alt="skatepark"/>
+                    <div class="card_contenu">
+                        <div class="card_title">
+                            <p> Projet n°2 par </p>
+                            <p>  Tom </p>
                         </div>
+                        <p class="card_text"> Création d'un skatepark à l'angle de Road Street avenue pour les petits et grands. Avec de quoi faire du skate, du roller et du vélo tout en sécurité.</p>
                     </div>
-                </section>
-                <section>
-                    <div class="content">
-                        <blockquote>
-                            <p>Villeneuve d'Ascq - Restauration d'un abri-bus.</p>
-                        </blockquote>
-                        <div class="author">
-                            <div class="image">
-                                <img src="images/abribus.jpg" alt="abribus" />
-                            </div>
-                            <p class="credit">- <strong>John Fidjeralt Kronembourg</strong> <span>Adjointe au Maire.</span></p>
+                    <p class="descStatut"> Statut : Construction prévue en mars 2021 </p>
+                </div>
+                <div class="card_publi">
+                    <img src="images/abribus.jpg" class="card_img" alt="abribus"/>
+                    <div class="card_contenu">
+                        <div class="card_title">
+                            <p> Projet n°6 par </p>
+                            <p>  Sonia </p>
                         </div>
+                        <p class="card_text"> Restauration d'un abri-bus délabré que mes enfants utilisent tous les jours. Ils ne sont même pas protégés de la pluie et la neige.</p>
                     </div>
-                </section>
-                <section>
-                    <div class="content">
-                        <blockquote>
-                            <p>Douai - Organisation d'un festival de pétanque inter-âge.</p>
-                        </blockquote>
-                        <div class="author">
-                            <div class="image">
-                                <img src="images/petanque.jpg" alt="petanque" />
-                            </div>
-                            <p class="credit">- <strong>Bob Ralowski</strong> <span>Président du club sportif.</span></p>
-                        </div>
-                    </div>
-                </section>
+                    <p class="descStatut"> Statut : En attente de présentation le 01/12 </p>
+                </div>
             </div>
         </section>
 
