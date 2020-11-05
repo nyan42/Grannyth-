@@ -57,6 +57,8 @@
             <a href="./index.php">
                 <img src="images/flecheRetour.png" class="img_retour" />
             </a>
+            <h2> Propositions en cours </h2>
+            <p class="listeDesc"> Vous pouvez retrouver les propositions en cours qui seront actives durant un mois à partir de leur date de publication.</p>
             <div>
                 <?php
 
