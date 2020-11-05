@@ -85,7 +85,7 @@
 					<form method="post" action="login.php" class="form_loginregister">
 						<?php include('errors.php'); ?>
 						<div class="form_group">
-							<input type="text" name="username" class="input_form" id="exampleInputEmail1" placeholder="Adresse email">
+							<input type="text" name="username" class="input_form" id="exampleInputEmail1" placeholder="Pseudo">
 						</div>
 						<div class="form_group">
 							<input type="password" class="input_form" name="password" id="exampleInputPassword1" placeholder="Mot de passe">

@@ -50,42 +50,103 @@ if (isset($_GET['logout'])) {
 	</nav>
 
 	<!-- Heading -->
-	<div id="heading">
+	<!--<div id="heading">
 		<h1>Profil</h1>
-	</div>
+	</div>-->
 
 	<!-- Main -->
-	<section id="main" class="wrapper">
+	<!--<section id="main" class="wrapper">
 		<div class="inner">
 			<div class="content">
 				<div class="container">
 
-					<div class="connexion">
+					<div class="connexion">-->
 						<!-- notification message -->
 						<?php if (isset($_SESSION['success'])) : ?>
-							<div class="error success">
+							<!--<div class="error success">
 								<h3>
 									<?php
 									echo $_SESSION['success'];
 									unset($_SESSION['success']);
 									?>
 								</h3>
-							</div>
+							</div>-->
 						<?php endif ?>
 
 						<!-- logged in user information -->
 						<?php if (isset($_SESSION['username'])) : ?>
-							<p>Bonjour <strong><?php echo $_SESSION['username']; ?></strong></p>
+							<!--<p>Bonjour <strong><?php echo $_SESSION['username']; ?></strong></p>
 							<p> <a href="../index.php" style="color: red;">menu principal</a> </p>
 							<p> <a href="../publication.php" style="color: red;">mes projets</a> </p>
-							<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>
+							<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>-->
 						<?php endif ?>
-					</div>
+					<!--</div>
 				</div>
 
 			</div>
 		</div>
-	</section>
+	</section>-->
+
+        <section class="profil">
+            <?php if (isset($_SESSION['success'])) : ?>
+                <?php
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+                ?>
+            <?php endif ?>
+            <?php if (isset($_SESSION['username'])) : ?>
+                <div class="title_profil">
+                    <div class="group_infosPerso">
+                        <div>
+                            <h2> <?php echo $_SESSION['username']; ?> </h2>
+                        </div>
+                        <div class="block_img">
+                            <img src="../images/modifierImg.png"/>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="infos_perso">
+                    <div class="group_infosPerso">
+                        <div>
+                            <p> Adresse mail  : RECUP EMAIL </p>
+                        </div>
+                        <div class="block_img">
+                            <img src="../images/modifierImg.png"/>
+                        </div>
+                    </div>
+                    <div class="group_infosPerso">
+                        <div>
+                            <p> Mot de passe : **********</p>
+                        </div>
+                        <div class="block_img">
+                            <img src="../images/modifierImg.png"/>
+                        </div>
+                    </div>
+                    <div class="group_infosPerso">
+                        <div>
+                            <p> Code postal  : RECUPERER CODE POSTAL </p>
+                        </div>
+                        <div class="block_img">
+                            <img src="../images/modifierImg.png"/>
+                        </div>
+                    </div>
+                    <div class="group_infosPerso">
+                        <div>
+                            <p> Ville  : RECUPERER VILLE </p>
+                        </div>
+                        <div class="block_img">
+                            <img src="../images/modifierImg.png"/>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            <?php endif ?>
+        </section>
 
 	<!-- Footer -->
 	<!--<footer id="footer">

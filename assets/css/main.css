@@ -277,6 +277,60 @@ html {
   justify-content: center;
 }
 
+/*Profil*/
+.profil{
+  padding-top: 5vh;
+  color: white;
+}
+
+.title_profil h2{
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.title_profil h2::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 80%;
+  left: 10%;
+  bottom: -0.3rem;
+}
+
+.title_profil .group_infosPerso{
+  justify-content: center;
+}
+
+.title_profil .block_img img{
+  margin-top: 1vh;
+}
+
+.infos_perso{
+  margin-top: 8vh;
+}
+
+.group_infosPerso{
+  display: flex;
+}
+
+.group_infosPerso img{
+  padding-left: 1vw;
+  width: 80%;
+}
+
+.group_infosPerso p{
+  margin-bottom: 1vh;
+}
+
+.block_img{
+  width: 10%;
+  text-align: center;
+}
+
+
+
+
 
 
 body.is-preload *,

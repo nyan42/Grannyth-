@@ -120,7 +120,7 @@
 						<?php include('errors.php'); ?>
 
 						<div class="form_group">
-							<input type="text" name="username" class="input_form" id="Username" value="<?php echo $username; ?>" placeholder="Username*" />
+							<input type="text" name="username" class="input_form" id="Username" value="<?php echo $username; ?>" placeholder="Pseudo*" />
 						</div>
 
 						<div class="form_group">
