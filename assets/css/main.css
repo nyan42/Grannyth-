@@ -11,9 +11,39 @@
   width: device-width;
 }
 
+@font-face {
+  font-family: "Luciole";
+  src: url("/fonts/Luciole-Regular.ttf");
+}
+
 body {
   -ms-overflow-style: scrollbar;
+  background: linear-gradient(#4334FC, #AB0FF2)!important;
+  font-family: "Luciole"!important;
+  margin: 0;
+  height: 100vh;
+  background-size: contain;
 }
+
+#root{
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 700px;
+}
+
+#root>div{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 700px) and (orientation: portrait){
+  #root{
+    display: block;
+  }
+}
+
 
 @media screen and (max-width: 480px) {
 
@@ -68,9 +98,166 @@ html {
 }
 
 
+/*Page connexion / inscription*/
+.login{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register form{
+  margin-bottom: 0;
+}
+
+.login .info_login{
+  color: white;
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+  font-size: 1rem;
+}
+
+.register .info_register{
+  color: white;
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  font-size: 1rem;
+}
+
+.buttons_loginregister{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: space-between;
+}
+
+.buttons_loginregister a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.9rem;
+}
+
+.form_loginregister{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login .button_form_loginregister{
+  color: #4334FC!important;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.3);
+}
+
+.register .button_form_loginregister{
+  color: #4334FC!important;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.3);
+}
+
+.input_form{
+  color: white!important;
+  border-radius: 1rem!important;
+  border-color: white!important;
+  background-color: transparent!important;
+  box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.2);
+}
+
+.form_group{
+  margin-bottom: 3vh;
+}
+
+.register .form_group{
+  margin-bottom: 2vh;
+}
+
+.form_group2{
+  display: flex;
+  margin-bottom: 3vh;
+  justify-content: space-between;
+}
+
+.form_group2 #cp{
+  width: 35%;
+  border: 1px solid white;
+  padding-left: 1rem;
+}
+
+.form_group2 #city{
+  width: 60%;
+}
+
+.form_group_validate{
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.register .form_group_validate{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.button_switch{
+  position: relative;
+}
+
+.button_switch::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 100%;
+  left: 0;
+  bottom: -0.3rem;
+}
+
+.register .info_age{
+  color: white;
+  font-size: 1rem;
+}
+
+.register .info_etoile{
+  color: white;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
 
 
+/*MainPage*/
+.buttons_mainpage{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
 
+.button_CTA{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-decoration: none;
+  color: #4334FC;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+}
+
+.img_retour{
+
+}
 
 
 body {
@@ -3978,7 +4165,7 @@ body {
 
 body:before {
   content: ' ';
-  background-image: url(../../images/bg.jpg);
+ /* background-image: url(../../images/bg.jpg);*/
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

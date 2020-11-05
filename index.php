@@ -88,7 +88,12 @@ if (!isset($_SESSION['username'])) {
 			</br></br>
 
 			<?php if ($isconnected == 1) { ?>
-				<div class="ImageTrois">
+                <div class="buttons_mainpage">
+                    <a href="PrendreUnePhoto.php" class="button_CTA">Prendre une photo </a>
+                    <a href="post.php" class="button_CTA"> Poster une proposition </a>
+                    <a href="publicationGeneral.php" class="button_CTA"> Voir les propositions </a>
+                </div>
+			<!--	<div class="ImageTrois">
 					<div class="textfacile">
 						<a href="PrendreUnePhoto.php">Prendre une photo </a>
 					</div>
@@ -110,7 +115,7 @@ if (!isset($_SESSION['username'])) {
 					<div class="textfacile">
 						<a href="publicationGeneral.php"><img src="images/bond.jpg"></a>
 					</div>
-				</div>
+				</div>-->
 			<?php } ?>
 		</div>
 	</section>

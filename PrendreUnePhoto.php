@@ -33,12 +33,12 @@
 	</nav>
 
 	<!-- Heading -->
-	<div id="heading">
+	<!--<div id="heading">
 		<h1>Prendre une photo</h1>
-	</div>
+	</div>-->
 
 	<!-- Main -->
-	<section id="main" class="wrapper">
+	<!--<section id="main" class="wrapper">
 		<div class="inner">
 			<div class="content">
 				<div class="ImageTrois">
@@ -55,10 +55,22 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
+    <section class="prendre_photo" id="main">
+        <a href="./index.php">
+            <img src="images/flecheRetour.png" class="img_retour"/>
+        </a>
+        <div>
+            <input type="image" id="avatar" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png"/>
+        </div>
+        <div>
+
+            <a href="post.php" class="button_CTA"> Publier la photo </a>
+        </div>
+    </section>
 
 	<!-- Footer -->
-	<footer id="footer">
+	<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -88,7 +100,7 @@
 				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
 			</div>
 		</div>
-	</footer>
+	</footer>-->
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>

@@ -21,7 +21,8 @@
 </head>
 
 <body class="is-preload">
-
+<div id="root">
+    <div>
 	<!-- Header -->
 	<header id="header">
 		<a class="logo" href="../index.php">SmartCityzen</a>
@@ -38,12 +39,12 @@
 	</nav>
 
 	<!-- Heading -->
-	<div id="heading">
+	<!--<div id="heading">
 		<h1>Inscription</h1>
-	</div>
+	</div>-->
 
 	<!-- Main -->
-	<section id="main" class="wrapper">
+	<!--<section id="main" class="wrapper">
 		<div class="inner">
 
 
@@ -61,30 +62,30 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputmail">Email</label>
-									<input type="email" class="form-control" id="mail" name="email" value="<?php echo $email; ?>">
+									<input type="email" class="form-control" id="mail" name="email" value="<?php echo $email; ?>" placeholder="Email"/>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputPassword4">Adress</label>
-								<input type="text" class="form-control" id="adress" name="adress">
+								<label for="inputPassword4">Adresse</label>
+								<input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse"/>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="city">City</label>
-									<input type="text" name="city" class="form-control" id="city">
+									<label for="city">Ville</label>
+									<input type="text" name="city" class="form-control" id="city" placeholder="Ville"/>
 								</div>
 								<div class="form-group col-md-6">
-									<label for="cp">Postal Code</label>
-									<input type="number" class="form-control" id="cp" name="cp">
+									<label for="cp">Code postal</label>
+									<input type="number" class="form-control" id="cp" name="cp" placeholder="Code postal"/>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputPassword4">Password</label>
-								<input type="password" class="form-control" id="inputPassword4" name="password_1">
+								<label for="inputPassword4">Mot de passe</label>
+								<input type="password" class="form-control" id="inputPassword4" name="password_1" placeholder="Mot de passe"/>
 							</div>
 							<div class="form-group">
-								<label for="inputPassword4">Confirm Password</label>
-								<input type="password" class="form-control" id="inputPassword4" name="password_2">
+								<label for="inputPassword4">Confirmation mot de passe</label>
+								<input type="password" class="form-control" id="inputPassword4" name="password_2" placeholder="Confirmation mot de passe"/>
 							</div>
 
 							<style>
@@ -106,10 +107,51 @@
 					</div>
 				</div>
 			</div>
-	</section>
+	</section>-->
+
+    <section class="register">
+        <div class="buttons_loginregister">
+            <a href="login.php"> Connexion </a>
+            <a href="register.php" class="button_switch"> Inscription </a>
+        </div>
+        <div>
+            <p class="info_register"> Veuillez remplir les informations suivantes afin de créer votre compte. </p>
+            <form method="post" action="register.php">
+                <?php include('errors.php'); ?>
+
+                <div class="form_group">
+                    <input type="text" name="username" class="input_form" id="Username" value="<?php echo $username; ?>" placeholder="Username*"/>
+                </div>
+
+                <div class="form_group">
+                    <input type="email" class="input_form" id="mail" name="email" value="<?php echo $email; ?>" placeholder="Email*"/>
+                </div>
+
+                <div class="form_group2">
+                   <input type="number" class="input_form" id="cp" name="cp" placeholder="Code postal*"/>
+                    <input type="text" name="city" class="input_form" id="city" placeholder="Ville*"/>
+                </div>
+
+                <div class="form_group">
+                    <input type="password" class="input_form" id="inputPassword4" name="password_1" placeholder="Mot de passe*"/>
+                </div>
+
+                <div class="form_group">
+                    <input type="password" class="input_form" id="inputPassword4" name="password_2" placeholder="Confirmation mot de passe*"/>
+                </div>
+
+                <p class="info_age"> En cliquant sur "S'inscrire", vous confirmez que vous êtes âgé de plus de 16 ans.</p>
+                <p class="info_etoile"> *Informations obligatoires</p>
+                <div class="form_group_validate">
+                    <button type="submit" class="button_form_loginregister" name="reg_user"> S'inscrire</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
 
 	<!-- Footer -->
-	<footer id="footer">
+	<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -139,8 +181,9 @@
 				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
 			</div>
 		</div>
-	</footer>
-
+	</footer>-->
+    </div>
+</div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
