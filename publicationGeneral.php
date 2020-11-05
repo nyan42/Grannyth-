@@ -34,17 +34,30 @@
     </nav>
 
     <!-- Heading -->
-    <div id="heading">
+   <!-- <div id="heading">
         <h1>Publications</h1>
-    </div>
+    </div>-->
 
     <!-- Main -->
-    <section id="main" class="wrapper">
+   <!-- <section id="main" class="wrapper">
 
         <div class="inner">
-            <a href="./index.php"> Retour </a>
+            <a href="./index.php">
+                <img src="images/flecheRetour.png" class="img_retour" />
+            </a>
 
             <div class="content">
+
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+        <section class="listePublications_ville">
+            <a href="./index.php">
+                <img src="images/flecheRetour.png" class="img_retour" />
+            </a>
+            <div>
                 <?php
 
                 require("bdd/dbSet.php");
@@ -68,31 +81,31 @@
                 $sql = "SELECT commentaire, photo FROM posts";
                 $requete = $db->query($sql);
 
-                ?><div class="card-columns">
+                ?>
+                <div class="listePublications">
                     <?php
                     $numeroProjet = 1;
                     while ($resultat = $requete->fetch_assoc()) {
                         $commentaire = $resultat['commentaire'];
                         $photo = $resultat['photo'];
-                    ?>
+                        ?>
 
-                        <div class="card">
-                            <?php echo '<img src=images/' . $photo . ' class="card-img-top"' . 'alt="' . $photo . '">' ?>
-                            <div class="card-body">
-                                <h5 class="card-title">Projet n°<?php echo $numeroProjet ?></h5>
-                                <p class="card-text"><?php echo $commentaire ?> </p>
+                        <div class="card_publi">
+                            <?php echo '<img src=images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
+                            <div class="card_contenu">
+                                <h5 class="card_title">Projet n°<?php echo $numeroProjet ?></h5>
+                                <p class="card_text"><?php echo $commentaire ?> </p>
                             </div>
                         </div>
 
-                    <?php
+                        <?php
                         $numeroProjet = $numeroProjet + 1;
                     }
 
                     ?>
                 </div>
-            </div>
-        </div>
-    </section>
+
+        </section>
 
 
 
