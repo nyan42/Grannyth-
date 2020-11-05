@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
+
 <!--
-	SmartCityzen - copyright
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	SmartCityzen - Worskshop 2020
 -->
+
 <html>
 
 <head>
@@ -50,7 +50,7 @@
 				<img id="changer" class="img_prendrephoto" src="images/loading.gif" style="display:none">
 			</div>
 			<div class="block_buttonPublier">
-				<a href="post.php" class="button_CTA"> Prenez la photo </a>
+				<a href="#" class="button_CTA"> Prenez la photo </a>
 
 				<input type="file" id="hiddenfile" style="display:none" class="img_prendrephoto" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" />
 			</div>

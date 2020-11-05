@@ -4,10 +4,9 @@
 <?php include('server.php') ?>
 
 <!DOCTYPE HTML>
+
 <!--
-	SmartCityzen - copyright
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	SmartCityzen - Worskshop 2020
 -->
 <html>
 
