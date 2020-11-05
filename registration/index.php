@@ -142,7 +142,7 @@ if (isset($_GET['logout'])) {
                     </div>
 
 
-
+<?php include 'publication.php'?>
 
                 </div>
             <?php endif ?>
