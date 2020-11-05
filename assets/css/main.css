@@ -129,7 +129,7 @@ html {
   font-size: 1.2rem;
 }
 
-.logo{
+.logo_nm{
   margin-top: 1.5vh;
 }
 
@@ -474,12 +474,30 @@ html {
 }
 
 .card_contenu{
-  border-bottom: 1px solid #4334FC;
+  position: relative;
+}
+
+.card_contenu::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid #4334FC;
+  width: 80%;
+  left: 10%;
+  bottom: -0.8rem;
 }
 
 .card_title{
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 1vh;
+  color: grey;
+  font-size: 1.3rem;
+}
+
+.card_title p:last-child{
+  margin-left: 1vw;
+  font-style: italic;
 }
 
 .card_img{
@@ -495,7 +513,8 @@ html {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  font-size: 0.9rem;
+  padding-bottom: 0.1vh;
 }
 
 .listePublications_ville h2{
@@ -524,12 +543,17 @@ html {
 
 .descVote{
   text-align: center;
-  margin-top: 2vh;
+  margin-top: 5vh;
+  font-size: 1.1rem;
+  margin-bottom: 1vh;
 }
 
 .buttons_vote{
   display: flex;
   justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button_CTA_vote{
@@ -537,11 +561,10 @@ html {
   margin-bottom: 2vh;
   text-decoration: none;
   color: white!important;
-  background-color: #4334FC!important;
+  background: linear-gradient(#4334FC, #AB0FF2)!important;
   border-radius: 0.5rem!important;
-  padding: 0.1rem 1rem!important;
   box-shadow: -1px 2px 5px 1px rgba(67, 52, 252, 0.5)!important;
-  font-size: 1.2rem!important;
+  font-size: 1rem!important;
   height: 100%!important;
   font-weight: 200!important;
 }

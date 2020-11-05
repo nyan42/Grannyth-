@@ -50,7 +50,7 @@ while ($resultat = $requete->fetch_assoc()) {
 
 	<!-- Header -->
         <header id="header">
-            <a class="logo" href="index.php">
+            <a class="logo logo_nm" href="index.php">
                 <img src="../images/SmartCitizen_blanc.png" class="logo_img" />
             </a>
             <nav>
