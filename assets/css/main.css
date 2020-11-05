@@ -299,7 +299,7 @@ html {
 }
 
 .img_retour{
-  margin-top: 3vh;
+  padding-top: 3vh;
   width: 12%;
 }
 
@@ -528,6 +528,49 @@ html {
   margin-left: 4vw;
   padding-bottom: 2vh;
 }
+
+
+/*Propositions validées*/
+.propositionsValid h2{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.propositionsValid h2::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 60%;
+  left: 20%;
+  bottom: -0.3rem;
+}
+
+.descValid{
+  color: white;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

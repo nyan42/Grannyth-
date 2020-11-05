@@ -65,6 +65,7 @@ while ($resultat = $requete->fetch_assoc()) {
                 <li><a href="../post.php">Publier une proposition </a></li>
                 <li><a href="../publicationGeneral.php">Voir les propositions </a></li>
                 <li><a href="../registration/index.php"> Mon profil </a></li>
+                <li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
                 <li><a href="index.php?logout='1'">Déconnexion </a></li>
             </ul>
         </nav>
