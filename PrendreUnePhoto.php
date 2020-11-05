@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body class="is-preload">
+<body>
+<div id="root">
 
 	<!-- Header -->
 	<header id="header">
@@ -109,7 +110,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+</div>
 </body>
 
 </html>

@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body class="is-preload">
+<body>
+    <div id="root">
 
     <!-- Header -->
     <header id="header">
@@ -97,7 +98,7 @@
 
 
     <!-- Footer -->
-    <footer id="footer">
+  <!--  <footer id="footer">
         <div class="inner">
             <div class="content">
                 <section>
@@ -127,7 +128,7 @@
                 &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
             </div>
         </div>
-    </footer>
+    </footer>-->
 
     <!-- Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -138,6 +139,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    </div>
 </body>
 
 </html>

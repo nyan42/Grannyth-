@@ -31,7 +31,8 @@ if (isset($_GET['logout'])) {
 	<link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 
-<body class="is-preload">
+<body>
+    <div id="root">
 
 	<!-- Header -->
 	<header id="header">
@@ -87,7 +88,7 @@ if (isset($_GET['logout'])) {
 	</section>
 
 	<!-- Footer -->
-	<footer id="footer">
+	<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -117,10 +118,10 @@ if (isset($_GET['logout'])) {
 				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
 			</div>
 		</div>
-	</footer>
+	</footer>-->
 
 
-
+    </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>

@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body class="is-preload">
+<body>
+    <div id="root">
 
 	<!-- Header -->
 	<header id="header">
@@ -35,9 +36,9 @@
 	</nav>
 
 	<!-- Heading -->
-	<div id="heading">
+	<!--<div id="heading">
 		<h1>Generic Page</h1>
-	</div>
+	</div>-->
 
 	<!-- Main -->
 	<section id="main" class="wrapper">
@@ -74,7 +75,7 @@
 	</section>
 
 	<!-- Footer -->
-	<footer id="footer">
+	<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -104,7 +105,7 @@
 				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
 			</div>
 		</div>
-	</footer>
+	</footer>-->
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -113,6 +114,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
+    </div>
 </body>
 
 </html>
