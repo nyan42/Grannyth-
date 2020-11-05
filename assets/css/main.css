@@ -333,9 +333,6 @@ html {
 
 
 /*Prendre photo*/
-.block_prendrephoto{
-  margin-top: 10vh;
-}
 .img_prendrephoto{
   display: block;
   margin-left: auto;

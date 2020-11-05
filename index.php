@@ -47,10 +47,11 @@ require ("bdd/dbSet.php");
         <!-- Nav -->
         <nav id="menu">
             <ul class="links">
+                <li><a href="registration/index.php"> Mon profil </a></li>
                 <li><a href="PrendreUnePhoto.php">Prendre une photo </a></li>
                 <li><a href="post.php">Publier une proposition </a></li>
-                <li><a href="publicationGeneral.php">Voir les propositions </a></li>
-                <li><a href="registration/index.php"> Mon profil </a></li>
+                <li><a href="publicationGeneral.php"> Propositions en cours </a></li>
+                <li><a href="propositionsValid.php"> Propositions validées </a></li>
                 <li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
                 <li><a href="index.php?logout='1'">Déconnexion </a></li>
             </ul>

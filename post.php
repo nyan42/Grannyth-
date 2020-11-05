@@ -28,49 +28,28 @@ if (isset($_SESSION['username'])) {
 <body>
 	<div id="root">
 
-		<!-- Header -->
-		<header id="header">
-			<a class="logo" href="index.php">SmartCityzen</a>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+        <!-- Header -->
+        <header id="header">
+            <a class="logo logo_nm" href="index.php">
+                <img src="images/SmartCitizen_blanc.png" class="logo_img" />
+            </a>
+            <nav>
+                <a href="#menu"></a>
+            </nav>
+        </header>
 
-		<!-- Nav -->
-		<nav id="menu">
-			<ul class="links">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="elements.php">Elements</a></li>
-				<li><a href="generic.php">Generic</a></li>
-			</ul>
-		</nav>
-
-		<!-- Heading -->
-		<!--<div id="heading">
-		<h1>Generic Page</h1>
-	</div>-->
-
-		<!-- Main -->
-		<!--<section id="main" class="wrapper">
-		<div class="inner">
-			<div class="content">
-				<h3>Poster un projet</h3>
-				<form method="post" action="publication.php">
-					<input type="hidden" name="action" value="poster-commentaire" />
-					<p>Commentaire<br /><textarea name="commentaire" id="commentaire"></textarea></p>
-					<p>Lien de la photo<br /><input type="text" name="photo" id="photo" /></p>
-					<div class="input-group">
-						<button type="submit" class="btn" name="reg_posts">Poster</button>
-					</div>
-					<div class="clear"></div>
-					<div class="clear"></div>
-					<a href="./index.php"> Retour
-			</div> </a>
-
-			</form>
-
-		</div>
-	</section>-->
+        <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="registration/index.php"> Mon profil </a></li>
+                <li><a href="PrendreUnePhoto.php">Prendre une photo </a></li>
+                <li><a href="post.php">Publier une proposition </a></li>
+                <li><a href="publicationGeneral.php"> Propositions en cours </a></li>
+                <li><a href="propositionsValid.php"> Propositions validées </a></li>
+                <li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
+                <li><a href="index.php?logout='1'">Déconnexion </a></li>
+            </ul>
+        </nav>
 
 		<section class="faireProposition">
 			<a href="./index.php">
@@ -156,42 +135,7 @@ if (isset($_SESSION['username'])) {
 
 			</form>
 
-
-
 		</section>
-
-		<!-- Footer -->
-		<!--<footer id="footer">
-		<div class="inner">
-			<div class="content">
-				<section>
-					<h3>Accumsan montes viverra</h3>
-					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-				</section>
-				<section>
-					<h4>Sem turpis amet semper</h4>
-					<ul class="alt">
-						<li><a href="#">Dolor pulvinar sed etiam.</a></li>
-						<li><a href="#">Etiam vel lorem sed amet.</a></li>
-						<li><a href="#">Felis enim feugiat viverra.</a></li>
-						<li><a href="#">Dolor pulvinar magna etiam.</a></li>
-					</ul>
-				</section>
-				<section>
-					<h4>Magna sed ipsum</h4>
-					<ul class="plain">
-						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-						<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
-					</ul>
-				</section>
-			</div>
-			<div class="copyright">
-				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
-			</div>
-		</div>
-	</footer>-->
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
