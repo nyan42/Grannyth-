@@ -57,17 +57,9 @@ if (!isset($_SESSION['username'])) {
 
 
 			if ($isconnected == 1) { ?>
-				<header class="special">
-					<h2><?php echo $username . " : Vous êtes connecté</h2>"; ?>
-						<p> Publiez dès maintenant votre projet</p>
-				</header>
 				<div class="ImageTrois">
 					<div class="textfacile">
-						<a href="registration/index.php?logout='1'"> Déconnexion </a>
-					</div>
-
-					<div class="textfacile">
-						<a href="publication.php"> Mes projets </a>
+						<a href="registration/index.php"> Mon profil </a>
 					</div>
 				</div>
 			<?php } else { ?>
@@ -88,12 +80,12 @@ if (!isset($_SESSION['username'])) {
 			</br></br>
 
 			<?php if ($isconnected == 1) { ?>
-                <div class="buttons_mainpage">
-                    <a href="PrendreUnePhoto.php" class="button_CTA">Prendre une photo </a>
-                    <a href="post.php" class="button_CTA"> Poster une proposition </a>
-                    <a href="publicationGeneral.php" class="button_CTA"> Voir les propositions </a>
-                </div>
-			<!--	<div class="ImageTrois">
+				<div class="buttons_mainpage">
+					<a href="PrendreUnePhoto.php" class="button_CTA">Prendre une photo </a>
+					<a href="post.php" class="button_CTA"> Poster une proposition </a>
+					<a href="publicationGeneral.php" class="button_CTA"> Voir les propositions </a>
+				</div>
+				<!--	<div class="ImageTrois">
 					<div class="textfacile">
 						<a href="PrendreUnePhoto.php">Prendre une photo </a>
 					</div>

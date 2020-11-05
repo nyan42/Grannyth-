@@ -18,30 +18,30 @@
 </head>
 
 <body class="is-preload">
-<div id="root">
-    <div>
-	<!-- Header -->
-	<header id="header">
-		<a class="logo" href="../index.php">SmartCityzen</a>
-		<nav>
-			<a href="#menu">Menu</a>
-		</nav>
-	</header>
+	<div id="root">
+		<div>
+			<!-- Header -->
+			<header id="header">
+				<a class="logo" href="../index.php">SmartCityzen</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
 
-	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="../index.php">Home</a></li>
-		</ul>
-	</nav>
+			<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../index.php">Home</a></li>
+				</ul>
+			</nav>
 
-	<!-- Heading -->
-<!--	<div id="heading">
+			<!-- Heading -->
+			<!--	<div id="heading">
 		<h1>Connexion</h1>
 	</div>-->
 
-	<!-- Main -->
-	<!--<section id="main" class="wrapper">
+			<!-- Main -->
+			<!--<section id="main" class="wrapper">
 		<div class="inner">
             <div class="buttons_loginregister">
                 <a href="login.php"> Connexion </a>
@@ -75,30 +75,30 @@
 		</div>
 	</section>-->
 
-    <section class="login">
-        <div class="buttons_loginregister">
-            <a href="login.php" class="button_switch"> Connexion </a>
-            <a href="register.php"> Inscription </a>
-        </div>
-        <div>
-            <p class="info_login"> Veuillez saisir les informations suivantes afin de vous connecter. </p>
-            <form method="post" action="login.php" class="form_loginregister">
-                <?php include('errors.php'); ?>
-                <div class="form_group">
-                    <input type="text" name="username" class="input_form" id="exampleInputEmail1" placeholder="Adresse email">
-                </div>
-                <div class="form_group">
-                    <input type="password" class="input_form" name="password" id="exampleInputPassword1" placeholder="Mot de passe">
-                </div>
-                <div class="form_group_validate">
-                    <button type="submit" class="button_form_loginregister" name="login_user">Se connecter</button>
-                </div>
-            </form>
-        </div>
-    </section>
+			<section class="login">
+				<div class="buttons_loginregister">
+					<a href="login.php" class="button_switch"> Connexion </a>
+					<a href="register.php"> Inscription </a>
+				</div>
+				<div>
+					<p class="info_login"> Veuillez saisir les informations suivantes afin de vous connecter. </p>
+					<form method="post" action="login.php" class="form_loginregister">
+						<?php include('errors.php'); ?>
+						<div class="form_group">
+							<input type="text" name="username" class="input_form" id="exampleInputEmail1" placeholder="Adresse email">
+						</div>
+						<div class="form_group">
+							<input type="password" class="input_form" name="password" id="exampleInputPassword1" placeholder="Mot de passe">
+						</div>
+						<div class="form_group_validate">
+							<button type="submit" class="button_form_loginregister" name="login_user">Se connecter</button>
+						</div>
+					</form>
+				</div>
+			</section>
 
-	<!-- Footer -->
-	<!--<footer id="footer">
+			<!-- Footer -->
+			<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -130,8 +130,8 @@
 		</div>
 	</footer>-->
 
-    </div>
-</div>
+		</div>
+	</div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>

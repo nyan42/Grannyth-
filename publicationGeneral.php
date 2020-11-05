@@ -58,7 +58,7 @@
                     // receive all input values from the form
                     $commentaire = mysqli_real_escape_string($db, $_POST['commentaire']);
                     $photo = mysqli_real_escape_string($db, $_POST['photo']);
-                    
+
 
                     $query = "INSERT INTO posts (photo, commentaire, email) 
         VALUES ('$photo', '$commentaire', '$username')";

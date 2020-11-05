@@ -57,29 +57,30 @@ if (isset($_GET['logout'])) {
 	<section id="main" class="wrapper">
 		<div class="inner">
 			<div class="content">
-			<div class="container">
+				<div class="container">
 
-<div class="connexion">
-	<!-- notification message -->
-	<?php if (isset($_SESSION['success'])) : ?>
-		<div class="error success">
-			<h3>
-				<?php
-				echo $_SESSION['success'];
-				unset($_SESSION['success']);
-				?>
-			</h3>
-		</div>
-	<?php endif ?>
+					<div class="connexion">
+						<!-- notification message -->
+						<?php if (isset($_SESSION['success'])) : ?>
+							<div class="error success">
+								<h3>
+									<?php
+									echo $_SESSION['success'];
+									unset($_SESSION['success']);
+									?>
+								</h3>
+							</div>
+						<?php endif ?>
 
-	<!-- logged in user information -->
-	<?php if (isset($_SESSION['username'])) : ?>
-		<p>Bonjour <strong><?php echo $_SESSION['username']; ?></strong></p>
-		<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-		<p> <a href="../index.php" style="color: red;">menu principal</a> </p>
-	<?php endif ?>
-</div>
-</div>
+						<!-- logged in user information -->
+						<?php if (isset($_SESSION['username'])) : ?>
+							<p>Bonjour <strong><?php echo $_SESSION['username']; ?></strong></p>
+							<p> <a href="../index.php" style="color: red;">menu principal</a> </p>
+							<p> <a href="../publication.php" style="color: red;">mes projets</a> </p>
+							<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>
+						<?php endif ?>
+					</div>
+				</div>
 
 			</div>
 		</div>
@@ -118,7 +119,7 @@ if (isset($_GET['logout'])) {
 		</div>
 	</footer>
 
-	
+
 
 </body>
 
