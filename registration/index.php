@@ -102,6 +102,9 @@ while ($resultat = $requete->fetch_assoc()) {
 	</section>-->
 
         <section class="profil">
+            <a href="./index.php">
+                <img src="../images/flecheRetour.png" class="img_retour" />
+            </a>
             <?php if (isset($_SESSION['success'])) : ?>
                 <?php
                 echo $_SESSION['success'];
@@ -155,10 +158,11 @@ while ($resultat = $requete->fetch_assoc()) {
                         </div>
                     </div>
 					<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>
-
-<?php include 'publication.php'?>
                 </div>
-            <?php endif ?>
+
+                <?php include 'publication.php'?>
+                <?php endif ?>
+
         </section>
 
 	<!-- Footer -->
