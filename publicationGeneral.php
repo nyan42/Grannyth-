@@ -100,6 +100,11 @@
                                 <p class="card_text"><?php echo $commentaire ?> </p>
                                 <p class="card_text"><?php echo $email ?> </p>
                             </div>
+                            <p class="descVote"> Pensez-vous qu'il faut présenter cette proposition au Conseil municipal ?</p>
+                            <div class="buttons_vote">
+                                <input type="button" class="button_CTA_vote" value="Oui"/>
+                                <input type="button" class="button_CTA_vote" value="Non"/>
+                            </div>
                         </div>
 
                         <?php

@@ -429,6 +429,10 @@ html {
   box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.6);
 }
 
+.card_contenu{
+  border-bottom: 1px solid #4334FC;
+}
+
 .card_title{
   text-align: center;
   margin-top: 1vh;
@@ -472,6 +476,30 @@ html {
   font-size: 1rem;
   margin-top: 3vh;
   margin-bottom: 4vh;
+}
+
+.descVote{
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.buttons_vote{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button_CTA_vote{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-decoration: none;
+  color: white!important;
+  background-color: #4334FC!important;
+  border-radius: 0.5rem!important;
+  padding: 0.1rem 1rem!important;
+  box-shadow: -1px 2px 5px 1px rgba(67, 52, 252, 0.5)!important;
+  font-size: 1.2rem!important;
+  height: 100%!important;
+  font-weight: 200!important;
 }
 
 
@@ -981,7 +1009,7 @@ button,
 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #555555;
-  color: #555555 !important;
+  color: #555555;
 }
 
 input[type="submit"]:hover,
