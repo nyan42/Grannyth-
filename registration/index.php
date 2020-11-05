@@ -102,7 +102,7 @@ while ($resultat = $requete->fetch_assoc()) {
 	</section>-->
 
         <section class="profil">
-            <a href="./index.php">
+            <a href="../index.php">
                 <img src="../images/flecheRetour.png" class="img_retour" />
             </a>
             <?php if (isset($_SESSION['success'])) : ?>
