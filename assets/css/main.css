@@ -135,7 +135,7 @@ html {
   font-size: 1.2rem;
 }
 
-.logo{
+.logo_nm{
   margin-top: 1.5vh;
 }
 
@@ -148,6 +148,19 @@ html {
 }
 
 /*Page connexion / inscription*/
+.logo_firstpages{
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  height: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+.logo_img_firstpages{
+  width: 9%;
+  padding-top: 0.5vh;
+}
 .login{
   width: 100%;
   margin-left: auto;
@@ -283,6 +296,10 @@ html {
 
 
 /*MainPage*/
+.mainpage{
+  margin-top: 15vh;
+}
+
 .buttons_mainpage{
   display: flex;
   flex-direction: column;
@@ -290,6 +307,11 @@ html {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+}
+
+.mainpage .button_CTA{
+  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 
 .button_CTA{
@@ -305,7 +327,8 @@ html {
 }
 
 .img_retour{
-  width: 14%;
+  padding-top: 3vh;
+  width: 12%;
 }
 
 
@@ -328,6 +351,10 @@ html {
 /*Profil*/
 .profil{
   color: white;
+}
+
+.title_profil{
+  margin-top: -2vh;
 }
 
 .title_profil h2{
@@ -354,7 +381,7 @@ html {
 }
 
 .infos_perso{
-  margin-top: 8vh;
+  margin-top: 1vh;
 }
 
 .group_infosPerso{
@@ -373,6 +400,23 @@ html {
 .block_img{
   width: 10%;
   text-align: center;
+}
+
+.title_mespubli{
+  margin-top: 3vh;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+.title_mespubli::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 50%;
+  left: 26%;
+  bottom: -0.3rem;
 }
 
 /*Faire une proposition*/
@@ -435,9 +479,31 @@ html {
   box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.6);
 }
 
+.card_contenu{
+  position: relative;
+}
+
+.card_contenu::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid #4334FC;
+  width: 80%;
+  left: 10%;
+  bottom: -0.8rem;
+}
+
 .card_title{
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 1vh;
+  color: grey;
+  font-size: 1.3rem;
+}
+
+.card_title p:last-child{
+  margin-left: 1vw;
+  font-style: italic;
 }
 
 .card_img{
@@ -453,7 +519,8 @@ html {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  font-size: 0.9rem;
+  padding-bottom: 1vh;
 }
 
 .listePublications_ville h2{
@@ -479,6 +546,94 @@ html {
   margin-top: 3vh;
   margin-bottom: 4vh;
 }
+
+.descVote{
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 1.1rem;
+  margin-bottom: 1vh;
+}
+
+.buttons_vote{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button_CTA_vote{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-decoration: none;
+  color: white!important;
+  background: linear-gradient(#4334FC, #AB0FF2)!important;
+  border-radius: 0.5rem!important;
+  box-shadow: -1px 2px 5px 1px rgba(67, 52, 252, 0.5)!important;
+  font-size: 1rem!important;
+  height: 100%!important;
+  font-weight: 200!important;
+}
+
+.nbVotes{
+  margin-left: 4vw;
+  padding-bottom: 2vh;
+}
+
+
+/*Propositions validées*/
+.propositionsValid h2{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.propositionsValid h2::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 60%;
+  left: 20%;
+  bottom: -0.3rem;
+}
+
+.descValid{
+  color: white;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.descStatut{
+  color: black;
+  font-size: 1.1rem;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+/*erreurs*/
+.error p{
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -987,7 +1142,7 @@ button,
 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #555555;
-  color: #555555 !important;
+  color: #555555;
 }
 
 input[type="submit"]:hover,
