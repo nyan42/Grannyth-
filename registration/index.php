@@ -155,11 +155,9 @@ while ($resultat = $requete->fetch_assoc()) {
                             <img src="../images/modifierImg.png"/>
                         </div>
                     </div>
-
-
-
 					<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>
-					<a href="../publication.php" class="button_CTA"> Voir les propositions </a>
+
+<?php include 'publication.php'?>
                 </div>
             <?php endif ?>
         </section>

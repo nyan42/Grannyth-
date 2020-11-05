@@ -328,6 +328,63 @@ html {
   text-align: center;
 }
 
+/*Faire une proposition*/
+.faireProposition{
+  color: white;
+}
+
+.faireProposition h2{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.faireProposition h2::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 80%;
+  left: 10%;
+  bottom: -0.3rem;
+}
+
+.button_poster{
+  margin-top: 7vh;
+}
+
+.button_poster button{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.1rem 1rem;
+  display: block;
+  height: 100%;
+  color: #4334FC!important;
+}
+
+.faireProposition .descProp{
+  margin-bottom: 1vh;
+  text-align: center;
+  padding-top: 1vh;
+}
+
+.faireProposition .nbProp{
+  font-size: 0.8rem;
+}
+
+.faireProposition .block_post{
+  margin-bottom: 4vh;
+}
+
+.faireProposition .block_post p{
+  margin-bottom: 1vh;
+}
+
+
+
+
+
+
 
 
 
