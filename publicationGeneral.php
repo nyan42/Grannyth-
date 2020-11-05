@@ -78,7 +78,7 @@
         VALUES ('$photo', '$commentaire', '$username')";
                     mysqli_query($db, $query);
                 }
-                $sql = "SELECT commentaire, photo FROM posts";
+                $sql = "SELECT commentaire, photo, email FROM posts";
                 $requete = $db->query($sql);
 
                 ?>
@@ -88,6 +88,7 @@
                     while ($resultat = $requete->fetch_assoc()) {
                         $commentaire = $resultat['commentaire'];
                         $photo = $resultat['photo'];
+                        $email = $resultat['email'];
                         ?>
 
                         <div class="card_publi">
@@ -95,6 +96,7 @@
                             <div class="card_contenu">
                                 <h5 class="card_title">Projet n°<?php echo $numeroProjet ?></h5>
                                 <p class="card_text"><?php echo $commentaire ?> </p>
+                                <p class="card_text"><?php echo $email ?> </p>
                             </div>
                         </div>
 

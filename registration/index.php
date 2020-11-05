@@ -26,7 +26,6 @@ while ($resultat = $requete->fetch_assoc()) {
 						$city = $resultat['city'];
 						$cp = $resultat['cp'];
  }
- echo $username;
 ?>
 
 <!DOCTYPE HTML>
