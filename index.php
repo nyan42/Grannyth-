@@ -57,8 +57,8 @@ require ("bdd/dbSet.php");
         </nav>
 
         <!-- Highlights -->
-        <section class="wrapper">
-            <div class="inner">
+        <section class="mainpage">
+            <div>
                 <?php
 
                 if ($isconnected == 1) { ?>
