@@ -6,12 +6,27 @@ if (!isset($_SESSION['username'])) {
 	header('location: login.php');
 }
 
+
+
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['username']);
 	header("location: login.php");
 }
 
+
+require ("../bdd/dbSet.php");
+
+$username = $_SESSION['username'];
+
+$sql = "SELECT email, city, cp FROM users WHERE username = '$username'";
+$requete = $db->query($sql);
+while ($resultat = $requete->fetch_assoc()) {
+                        $email = $resultat['email'];
+						$city = $resultat['city'];
+						$cp = $resultat['cp'];
+ }
+ echo $username;
 ?>
 
 <!DOCTYPE HTML>
@@ -110,7 +125,7 @@ if (isset($_GET['logout'])) {
                 <div class="infos_perso">
                     <div class="group_infosPerso">
                         <div>
-                            <p> Adresse mail  : RECUP EMAIL </p>
+                            <p> Adresse mail  : <?php echo $email; ?> </p>
                         </div>
                         <div class="block_img">
                             <img src="../images/modifierImg.png"/>
@@ -126,7 +141,7 @@ if (isset($_GET['logout'])) {
                     </div>
                     <div class="group_infosPerso">
                         <div>
-                            <p> Code postal  : RECUPERER CODE POSTAL </p>
+                            <p> Code postal  : <?php echo $cp; ?> </p>
                         </div>
                         <div class="block_img">
                             <img src="../images/modifierImg.png"/>
@@ -134,16 +149,15 @@ if (isset($_GET['logout'])) {
                     </div>
                     <div class="group_infosPerso">
                         <div>
-                            <p> Ville  : RECUPERER VILLE </p>
+                            <p> Ville  : <?php echo $city; ?> </p>
                         </div>
                         <div class="block_img">
                             <img src="../images/modifierImg.png"/>
                         </div>
                     </div>
+					<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>
 
-
-
-
+<?php include 'publication.php'?>
                 </div>
             <?php endif ?>
         </section>
@@ -191,3 +205,4 @@ if (isset($_GET['logout'])) {
 
 
 </html>
+

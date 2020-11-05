@@ -33,23 +33,16 @@
         </ul>
     </nav>
 
-    <!-- Heading -->
-    <div id="heading">
-        <h1>Publications</h1>
-    </div>
-
     <!-- Main -->
     <section id="main" class="wrapper">
 
         <div class="inner">
             <a href="./index.php"> Retour </a>
 
-            <div class="content">
                 <?php
 
-                require("bdd/dbSet.php");
+require("../bdd/dbSet.php");
 
-                session_start();
 
                 if (isset($_SESSION['username'])) {
                     $username = $_SESSION['username'];
@@ -77,7 +70,7 @@
                     ?>
 
                         <div class="card">
-                            <?php echo '<img src=images/' . $photo . ' class="card-img-top"' . 'alt="' . $photo . '">' ?>
+                            <?php echo '<img src=../images/' . $photo . ' class="card-img-top"' . 'alt="' . $photo . '">' ?>
                             <div class="card-body">
                                 <h5 class="card-title">Projet n°<?php echo $numeroProjet ?></h5>
                                 <p class="card-text"><?php echo $commentaire ?> </p>
@@ -89,7 +82,6 @@
                     }
 
                     ?>
-                </div>
             </div>
         </div>
     </section>
