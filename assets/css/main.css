@@ -256,13 +256,28 @@ html {
 }
 
 .img_retour{
-
+  width: 15%;
+  padding-left: 2vw;
 }
 
 
-body {
-  background: #ffffff;
+/*Prendre photo*/
+.block_prendrephoto{
+  margin-top: 10vh;
 }
+.img_prendrephoto{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block_buttonPublier{
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 body.is-preload *,
 body.is-preload *:before,
