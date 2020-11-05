@@ -46,44 +46,10 @@
 			</a>
 			<div class="block_prendrephoto">
 				<input type="image" class="img_prendrephoto" id="ImageFake" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" onclick="getfile()">
-				<input type="text" id="selectedfile" style="color:white;" value="Choisissez un fichier" />
 				<img id="changer" class="img_prendrephoto" src="images/loading.gif" style="display:none">
-
-				<script type="text/javascript">
-					function getfile() {
-						document.getElementById('hiddenfile').click();
-						miseEnAttente0();
-
-						function miseEnAttente0() {
-							//Traitement
-							setTimeout(fonctionAExecuter0, 1500); //On attend 5 secondes avant d'exécuter la fonction
-						}
-
-						function miseEnAttente1() {
-							//Traitement
-							setTimeout(fonctionAExecuter1, 4000); //On attend 5 secondes avant d'exécuter la fonction
-						}
-
-						function fonctionAExecuter0() {
-							let nomImage = document.getElementById('hiddenfile').value; 
-							document.getElementById('selectedfile').value = nomImage.substr(12); //"Veuillez patienter..."
-							document.getElementById('changer').style.display = "block";
-							miseEnAttente1();
-
-						}
-
-						function fonctionAExecuter1() {
-							//document.getElementById('selectedfile').value = "Fichier téléchargé avec succès"
-							document.getElementById('changer').style.display = "none";
-
-						}
-
-
-					}
-				</script>
 			</div>
 			<div class="block_buttonPublier">
-				<a href="post.php" class="button_CTA"> Publier la photo </a>
+				<a href="post.php" class="button_CTA"> Prenez la photo </a>
 
 				<input type="file" id="hiddenfile" style="display:none" class="img_prendrephoto" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" />
 			</div>
