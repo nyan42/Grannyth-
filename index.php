@@ -65,18 +65,16 @@ require ("bdd/dbSet.php");
                 if ($isconnected == 1) { ?>
 
                 <?php } else { ?>
-                    <header class="special">
-                        <h2>Connectez-vous pour voter ou publier</h2>
-                        <p> Le monde de demain ne demande que vous</p>
-                    </header>
-                    <div class="ImageTrois">
-                        <div class="textfacile">
-                            <a href="registration/"> Connexion </a>
+                    <div class="pasidentif">
+                        <div class="title_pasidentif">
+                            <h2>Connectez-vous pour utiliser l'application </h2>
                         </div>
-                        <div class="textfacile">
-                            <a href="registration/register.php"> Inscription </a>
+                        <div class="buttons_pasident">
+                            <a href="registration/" class="link_pasident"> Connexion </a>
+                            <a href="registration/register.php" class="link_pasident"> Inscription </a>
                         </div>
                     </div>
+
                 <?php } ?>
 
 

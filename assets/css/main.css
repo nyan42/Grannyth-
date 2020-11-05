@@ -616,7 +616,38 @@ html {
   text-align: center;
 }
 
+/* pas log*/
+.title_pasidentif{
+  color: white;
+  margin-bottom: 9vh;
+}
 
+.title_pasidentif h2{
+  color: white;
+  text-align: center;
+
+}
+
+.link_pasident{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-decoration: none;
+  color: #4334FC;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.link_pasident{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
