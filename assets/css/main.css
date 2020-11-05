@@ -29,6 +29,12 @@ h2{
   text-transform: none!important;
 }
 
+#changer{
+  width:50%;
+  height:50%;
+  margin-top:20px;
+}
+
 #root{
   width: 90%;
   margin: 0 auto;

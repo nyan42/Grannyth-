@@ -16,30 +16,30 @@
 </head>
 
 <body>
-<div id="root">
+	<div id="root">
 
-	<!-- Header -->
-	<header id="header">
-		<a class="logo" href="index.php">SmartCityzen</a>
-		<nav>
-			<a href="#menu">Menu</a>
+		<!-- Header -->
+		<header id="header">
+			<a class="logo" href="index.php">SmartCityzen</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.php">Home</a></li>
+			</ul>
 		</nav>
-	</header>
 
-	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="index.php">Home</a></li>
-		</ul>
-	</nav>
-
-	<!-- Heading -->
-	<!--<div id="heading">
+		<!-- Heading -->
+		<!--<div id="heading">
 		<h1>Prendre une photo</h1>
 	</div>-->
 
-	<!-- Main -->
-	<!--<section id="main" class="wrapper">
+		<!-- Main -->
+		<!--<section id="main" class="wrapper">
 		<div class="inner">
 			<div class="content">
 				<div class="ImageTrois">
@@ -58,21 +58,58 @@
 		</div>
 	</section>-->
 
-	<section class="prendre_photo" id="main">
-		<a href="./index.php">
-			<img src="images/flecheRetour.png" class="img_retour" />
-		</a>
-		<div class="block_prendrephoto">
-			<input type="image" id="avatar" name="avatar" accept="image/png, image/jpeg" class="img_prendrephoto" src="images/InsertImg2.png" />
-		</div>
-		<div class="block_buttonPublier">
-			<a href="post.php" class="button_CTA"> Publier la photo </a>
-		</div>
-	</section>
+		<section class="prendre_photo" id="main">
+			<a href="./index.php">
+				<img src="images/flecheRetour.png" class="img_retour" />
+			</a>
+			<div class="block_prendrephoto">
+				<input type="image" class="img_prendrephoto" id="ImageFake" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" onclick="getfile()">
+				<input type="text" id="selectedfile" style="color:white;" value="Choisissez un fichier" />
+				<img id="changer" class="img_prendrephoto" src="images/loading.gif" style="display:none">
+
+				<script type="text/javascript">
+					function getfile() {
+						document.getElementById('hiddenfile').click();
+						miseEnAttente0();
+
+						function miseEnAttente0() {
+							//Traitement
+							setTimeout(fonctionAExecuter0, 1500); //On attend 5 secondes avant d'exécuter la fonction
+						}
+
+						function miseEnAttente1() {
+							//Traitement
+							setTimeout(fonctionAExecuter1, 4000); //On attend 5 secondes avant d'exécuter la fonction
+						}
+
+						function fonctionAExecuter0() {
+							let nomImage = document.getElementById('hiddenfile').value; 
+							document.getElementById('selectedfile').value = nomImage.substr(12); //"Veuillez patienter..."
+							document.getElementById('changer').style.display = "block";
+							miseEnAttente1();
+
+						}
+
+						function fonctionAExecuter1() {
+							//document.getElementById('selectedfile').value = "Fichier téléchargé avec succès"
+							document.getElementById('changer').style.display = "none";
+
+						}
 
 
-	<!-- Footer -->
-	<!--<footer id="footer">
+					}
+				</script>
+			</div>
+			<div class="block_buttonPublier">
+				<a href="post.php" class="button_CTA"> Publier la photo </a>
+
+				<input type="file" id="hiddenfile" style="display:none" class="img_prendrephoto" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" />
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -104,13 +141,13 @@
 		</div>
 	</footer>-->
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</div>
 </body>
 
 </html>

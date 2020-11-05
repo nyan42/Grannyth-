@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+require("bdd/dbSet.php");
+if (isset($_SESSION['username'])) {
+	$username = $_SESSION['username'];
+}
+
+?>
+
 <!DOCTYPE HTML>
 <!--
 	SmartCityzen - copyright
@@ -16,32 +26,32 @@
 </head>
 
 <body>
-    <div id="root">
+	<div id="root">
 
-	<!-- Header -->
-	<header id="header">
-		<a class="logo" href="index.php">SmartCityzen</a>
-		<nav>
-			<a href="#menu">Menu</a>
+		<!-- Header -->
+		<header id="header">
+			<a class="logo" href="index.php">SmartCityzen</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.php">Home</a></li>
+				<li><a href="elements.php">Elements</a></li>
+				<li><a href="generic.php">Generic</a></li>
+			</ul>
 		</nav>
-	</header>
 
-	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="index.php">Home</a></li>
-			<li><a href="elements.php">Elements</a></li>
-			<li><a href="generic.php">Generic</a></li>
-		</ul>
-	</nav>
-
-	<!-- Heading -->
-	<!--<div id="heading">
+		<!-- Heading -->
+		<!--<div id="heading">
 		<h1>Generic Page</h1>
 	</div>-->
 
-	<!-- Main -->
-	<!--<section id="main" class="wrapper">
+		<!-- Main -->
+		<!--<section id="main" class="wrapper">
 		<div class="inner">
 			<div class="content">
 				<h3>Poster un projet</h3>
@@ -62,48 +72,96 @@
 		</div>
 	</section>-->
 
-        <section class="faireProposition">
-            <a href="./index.php">
-                <img src="images/flecheRetour.png" class="img_retour" />
-            </a>
+		<section class="faireProposition">
+			<a href="./index.php">
+				<img src="images/flecheRetour.png" class="img_retour" />
+			</a>
 
-            <h2> Publier une proposition</h2>
-            <p class="descProp"> Veuillez remplir les informations suivantes afin de publier votre proposition.</p>
-            <p class="nbProp"> Nb : Votre proposition doit se situer dans la ville où vous habitez (renseignée dans votre profil).</p>
-                <form method="post" action="publication.php">
-                    <input type="hidden" name="action" value="poster-commentaire" />
-                    <div class="block_post">
-                        <p> Description </p>
-                        <textarea name="commentaire" id="commentaire" class="input_form"> </textarea>
-                    </div>
-                    <div class="block_post">
-                        <p> Lien de la photo</p>
-                        <input type="text" name="photo" class="input_form" id="photo" />
-                    </div>
+			<h2> Publier une proposition</h2>
+			<p class="descProp"> Veuillez remplir les informations suivantes afin de publier votre proposition.</p>
+			<p class="nbProp"> Nb : Votre proposition doit se situer dans la ville où vous habitez (renseignée dans votre profil).</p>
 
-                    <div class="button_poster">
-                        <button type="submit" class="button_CTA" name="reg_posts">Publier </button>
-                    </div>
+			<section class="prendre_photo">
+				<div class="block_prendrephoto">
+					<input type="image" class="img_prendrephoto" id="ImageFake" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" onclick="getfile()">
+					<p id="selectedfile" style="color:white;text-align:center;"> Sélectionner une image </p>
+					<img id="changer" class="img_prendrephoto" src="images/loading.gif" style="display:none">
 
-                    <div class="clear"></div>
-                    <div class="clear"></div>
+					<script type="text/javascript">
+						function getfile() {
+							document.getElementById('hiddenfile').click();
+							miseEnAttente0();
 
-                </form>
+							function miseEnAttente0() {
+								//Traitement
+								setTimeout(fonctionAExecuter0, 2000); //On attend 5 secondes avant d'exécuter la fonction
+							}
 
-                <?php
-                session_start();
+							function miseEnAttente1() {
+								//Traitement
+								setTimeout(fonctionAExecuter1, 2200); //On attend 5 secondes avant d'exécuter la fonction
+							}
 
-                require("bdd/dbSet.php");
-                if (isset($_SESSION['username'])) {
-                    $username = $_SESSION['username'];
-                }
+							function fonctionAExecuter0() {
+								let nomImage = document.getElementById('hiddenfile').value;
+								document.getElementById('photo').value = nomImage.substr(12); //"Veuillez patienter..."
 
-                ?>
+								document.getElementById('changer').style.display = "block";
+								console.log(nomImage)
+								if (nomImage == "") {
+									miseEnAttente0(); //On boucle jusqu'a tant qu'on insert MDR, du code de qualité ca 
+								} else {
+									miseEnAttente1(nomImage);
+								}
 
-        </section>
 
-	<!-- Footer -->
-	<!--<footer id="footer">
+							}
+
+							function fonctionAExecuter1(nomImage) {
+								//document.getElementById('selectedfile').value = "Fichier téléchargé avec succès"
+								document.getElementById('changer').style.display = "none";
+								document.getElementById('ImageFake').style.display = "none";
+								document.getElementById('selectedfile').style.display = "none";
+								document.getElementById('photo').value = nomImage.substr(12); //"Veuillez patienter..."
+								alert(document.getElementById('photo').value)
+
+							}
+
+
+						}
+					</script>
+				</div>
+				<div class="block_buttonPublier">
+					<input type="file" id="hiddenfile" style="display:none" class="img_prendrephoto" name="avatar" accept="image/png, image/jpeg" src="images/InsertImg2.png" />
+				</div>
+			</section>
+
+			<form method="post" action="publicationGeneral.php">
+				<input type="hidden" name="action" value="poster-commentaire" />
+				<div class="block_post">
+					<p> Description </p>
+					<textarea name="commentaire" id="commentaire" class="input_form"> </textarea>
+				</div>
+				<div class="block_post">
+					<p> Photo</p>
+					<input type="text" name="photo" class="input_form" id="photo" />
+				</div>
+
+				<div class="button_poster">
+					<button type="submit" class="button_CTA" name="reg_posts">Publier </button>
+				</div>
+
+				<div class="clear"></div>
+				<div class="clear"></div>
+
+			</form>
+
+
+
+		</section>
+
+		<!-- Footer -->
+		<!--<footer id="footer">
 		<div class="inner">
 			<div class="content">
 				<section>
@@ -135,14 +193,14 @@
 		</div>
 	</footer>-->
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-    </div>
+	</div>
 </body>
 
 </html>
