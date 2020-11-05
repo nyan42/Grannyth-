@@ -105,6 +105,7 @@
                                 <input type="button" class="button_CTA_vote" value="Oui"/>
                                 <input type="button" class="button_CTA_vote" value="Non"/>
                             </div>
+                            <p class="nbVotes"> 200 personnes valides sur 230 votes</p>
                         </div>
 
                         <?php
