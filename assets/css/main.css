@@ -575,6 +575,11 @@ html {
   margin-top: 3vh;
 }
 
+/*erreurs*/
+.error p{
+  color: white;
+  text-align: center;
+}
 
 
 

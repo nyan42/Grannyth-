@@ -15,14 +15,14 @@
 		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
 		// form validation: ensure that the form is correctly filled
-		if (empty($username)) { array_push($errors, "Username is required"); }
-		if (empty($email)) { array_push($errors, "Email is required"); }
-		if (empty($city)) { array_push($errors, "City is required"); }
-		if (empty($cp)) { array_push($errors, "Postal Code is required"); }
-		if (empty($password_1)) { array_push($errors, "Password is required"); }
+		if (empty($username)) { array_push($errors, "Pseudo requis"); }
+		if (empty($email)) { array_push($errors, "Email requis"); }
+		if (empty($city)) { array_push($errors, "Ville requis"); }
+		if (empty($cp)) { array_push($errors, "Code postal requis"); }
+		if (empty($password_1)) { array_push($errors, "Mot de passe requis"); }
 
 		if ($password_1 != $password_2) {
-			array_push($errors, "The two passwords do not match");
+			array_push($errors, "Les 2 mot de passes sont différents");
 		}
 
 		// register user if there are no errors in the form
@@ -47,10 +47,10 @@
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 
 		if (empty($username)) {
-			array_push($errors, "Username is required");
+			array_push($errors, "Pseudo requis");
 		}
 		if (empty($password)) {
-			array_push($errors, "Password is required");
+			array_push($errors, "Mot de passe requis");
 		}
 
 		if (count($errors) == 0) {
@@ -61,9 +61,9 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: index.php');
+				header('location: ../index.php');
 			}else {
-				array_push($errors, "Wrong username/password combination");
+				array_push($errors, "Erreur dans le pseudo et/ou le mot de passe");
 			}
 		}
 	}
