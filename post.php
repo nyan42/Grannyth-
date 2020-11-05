@@ -41,7 +41,7 @@
 	</div>-->
 
 	<!-- Main -->
-	<section id="main" class="wrapper">
+	<!--<section id="main" class="wrapper">
 		<div class="inner">
 			<div class="content">
 				<h3>Poster un projet</h3>
@@ -59,20 +59,48 @@
 
 			</form>
 
-			<?php
-			session_start();
-
-			require("bdd/dbSet.php");
-			if (isset($_SESSION['username'])) {
-				$username = $_SESSION['username'];
-			}
-
-
-
-
-			?>
 		</div>
-	</section>
+	</section>-->
+
+        <section class="faireProposition">
+            <a href="./index.php">
+                <img src="images/flecheRetour.png" class="img_retour" />
+            </a>
+
+            <h2> Publier une proposition</h2>
+            <p class="descProp"> Veuillez remplir les informations suivantes afin de publier votre proposition.</p>
+            <p class="nbProp"> Nb : Votre proposition doit se situer dans la ville où vous habitez (renseignée dans votre profil).</p>
+                <form method="post" action="publication.php">
+                    <input type="hidden" name="action" value="poster-commentaire" />
+                    <div class="block_post">
+                        <p> Description </p>
+                        <textarea name="commentaire" id="commentaire" class="input_form"> </textarea>
+                    </div>
+                    <div class="block_post">
+                        <p> Lien de la photo</p>
+                        <input type="text" name="photo" class="input_form" id="photo" />
+                    </div>
+
+                    <div class="button_poster">
+                        <button type="submit" class="button_CTA" name="reg_posts">Publier </button>
+                    </div>
+
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+
+                </form>
+
+                <?php
+                session_start();
+
+                require("bdd/dbSet.php");
+                if (isset($_SESSION['username'])) {
+                    $username = $_SESSION['username'];
+                }
+
+                ?>
+
+        </section>
 
 	<!-- Footer -->
 	<!--<footer id="footer">
