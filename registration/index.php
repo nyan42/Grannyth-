@@ -49,24 +49,25 @@ while ($resultat = $requete->fetch_assoc()) {
     <div id="root">
 
 	<!-- Header -->
-	<header id="header">
-		<a class="logo" href="../index.php">SmartCityzen</a>
-		<nav>
-			<a href="#menu">Menu</a>
-		</nav>
-	</header>
+        <header id="header">
+            <a class="logo" href="index.php">
+                <img src="../images/SmartCitizen_blanc.png" class="logo_img" />
+            </a>
+            <nav>
+                <a href="#menu"></a>
+            </nav>
+        </header>
 
 	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="../index.php">Home</a></li>
-		</ul>
-	</nav>
-
-	<!-- Heading -->
-	<!--<div id="heading">
-		<h1>Profil</h1>
-	</div>-->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../PrendreUnePhoto.php">Prendre une photo </a></li>
+                <li><a href="../post.php">Publier une proposition </a></li>
+                <li><a href="../publicationGeneral.php">Voir les propositions </a></li>
+                <li><a href="../registration/index.php"> Mon profil </a></li>
+                <li><a href="index.php?logout='1'">Déconnexion </a></li>
+            </ul>
+        </nav>
 
 	<!-- Main -->
 	<!--<section id="main" class="wrapper">
@@ -157,49 +158,14 @@ while ($resultat = $requete->fetch_assoc()) {
                             <img src="../images/modifierImg.png"/>
                         </div>
                     </div>
-					<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>
                 </div>
 
                 <?php include 'publication.php'?>
                 <?php endif ?>
 
         </section>
-
-	<!-- Footer -->
-	<!--<footer id="footer">
-		<div class="inner">
-			<div class="content">
-				<section>
-					<h3>Accumsan montes viverra</h3>
-					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-				</section>
-				<section>
-					<h4>Sem turpis amet semper</h4>
-					<ul class="alt">
-						<li><a href="#">Dolor pulvinar sed etiam.</a></li>
-						<li><a href="#">Etiam vel lorem sed amet.</a></li>
-						<li><a href="#">Felis enim feugiat viverra.</a></li>
-						<li><a href="#">Dolor pulvinar magna etiam.</a></li>
-					</ul>
-				</section>
-				<section>
-					<h4>Magna sed ipsum</h4>
-					<ul class="plain">
-						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-						<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
-					</ul>
-				</section>
-			</div>
-			<div class="copyright">
-				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
-			</div>
-		</div>
-	</footer>-->
-
-
     </div>
+
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>

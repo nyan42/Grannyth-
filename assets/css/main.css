@@ -299,7 +299,8 @@ html {
 }
 
 .img_retour{
-  width: 14%;
+  margin-top: 3vh;
+  width: 12%;
 }
 
 
@@ -322,6 +323,10 @@ html {
 /*Profil*/
 .profil{
   color: white;
+}
+
+.title_profil{
+  margin-top: -2vh;
 }
 
 .title_profil h2{
@@ -348,7 +353,7 @@ html {
 }
 
 .infos_perso{
-  margin-top: 8vh;
+  margin-top: 1vh;
 }
 
 .group_infosPerso{
@@ -367,6 +372,23 @@ html {
 .block_img{
   width: 10%;
   text-align: center;
+}
+
+.title_mespubli{
+  margin-top: 3vh;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+.title_mespubli::after{
+  position: absolute;
+  content: "";
+  border-bottom: 0.2rem solid white;
+  width: 50%;
+  left: 26%;
+  bottom: -0.3rem;
 }
 
 /*Faire une proposition*/
