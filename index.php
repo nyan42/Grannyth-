@@ -2,11 +2,11 @@
 session_start();
 
 if (!isset($_SESSION['username'])) {
-	$isconnected = 0;
-	$username = "";
+    $isconnected = 0;
+    $username = "";
 } else {
-	$isconnected = 1;
-	$username = $_SESSION['username'];
+    $isconnected = 1;
+    $username = $_SESSION['username'];
 }
 
 if (isset($_GET['logout'])) {
@@ -15,7 +15,7 @@ if (isset($_GET['logout'])) {
     header("location: registration/login.php");
 }
 
-require ("bdd/dbSet.php");
+require("bdd/dbSet.php");
 
 ?>
 
@@ -23,12 +23,12 @@ require ("bdd/dbSet.php");
 <html>
 
 <head>
-	<title>SmartCityzen</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <title>SmartCityzen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>

@@ -20,12 +20,12 @@
 	<div id="root">
 		<div>
 
-            <!-- Header -->
-            <header id="header">
-                <a class="logo_firstpages" href="../index.php">
-                    <img src="../images/SmartCitizen_blanc.png" class="logo_img_firstpages"/>
-                </a>
-            </header>
+			<!-- Header -->
+			<header id="header">
+				<a class="logo_firstpages" href="../index.php">
+					<img src="../images/SmartCitizen_blanc.png" class="logo_img_firstpages" />
+				</a>
+			</header>
 
 
 

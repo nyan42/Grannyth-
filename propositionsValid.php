@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-    <!--
+<!--
     SmartCityzen - copyright
         templated.co @templatedco
         Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
@@ -50,22 +50,22 @@
             <p class="descValid"> Retrouvez toutes les propositions validées de votre ville ainsi que leur statut.</p>
             <div class="listePublications">
                 <div class="card_publi">
-                    <img src="images/skatepark.jpg" class="card_img" alt="skatepark"/>
+                    <img src="images/skatepark.jpg" class="card_img" alt="skatepark" />
                     <div class="card_contenu">
                         <div class="card_title">
                             <p> Projet n°2 par </p>
-                            <p>  Tom </p>
+                            <p> Tom </p>
                         </div>
                         <p class="card_text"> Création d'un skatepark à l'angle de Road Street avenue pour les petits et grands. Avec de quoi faire du skate, du roller et du vélo tout en sécurité.</p>
                     </div>
                     <p class="descStatut"> Statut : Construction prévue en mars 2021 </p>
                 </div>
                 <div class="card_publi">
-                    <img src="images/abribus.jpg" class="card_img" alt="abribus"/>
+                    <img src="images/abribus.jpg" class="card_img" alt="abribus" />
                     <div class="card_contenu">
                         <div class="card_title">
                             <p> Projet n°6 par </p>
-                            <p>  Sonia </p>
+                            <p> Sonia </p>
                         </div>
                         <p class="card_text"> Restauration d'un abri-bus délabré que mes enfants utilisent tous les jours. Ils ne sont même pas protégés de la pluie et la neige.</p>
                     </div>

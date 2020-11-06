@@ -2,30 +2,30 @@
 session_start();
 
 if (!isset($_SESSION['username'])) {
-	$_SESSION['msg'] = "You must log in first";
-	header('location: login.php');
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
 }
 
 
 
 if (isset($_GET['logout'])) {
-	session_destroy();
-	unset($_SESSION['username']);
-	header("location: login.php");
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
 }
 
 
-require ("../bdd/dbSet.php");
+require("../bdd/dbSet.php");
 
 $username = $_SESSION['username'];
 
 $sql = "SELECT email, city, cp FROM users WHERE username = '$username'";
 $requete = $db->query($sql);
 while ($resultat = $requete->fetch_assoc()) {
-                        $email = $resultat['email'];
-						$city = $resultat['city'];
-						$cp = $resultat['cp'];
- }
+    $email = $resultat['email'];
+    $city = $resultat['city'];
+    $cp = $resultat['cp'];
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -36,18 +36,18 @@ while ($resultat = $requete->fetch_assoc()) {
 <html>
 
 <head>
-	<title>Profil</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<link rel="stylesheet" href="../assets/css/main.css" />
+    <title>Profil</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 
 <body>
     <div id="root">
 
-	<!-- Header -->
+        <!-- Header -->
         <header id="header">
             <a class="logo logo_nm" href="../index.php">
                 <img src="../images/SmartCitizen_blanc.png" class="logo_img" />
@@ -57,7 +57,7 @@ while ($resultat = $requete->fetch_assoc()) {
             </nav>
         </header>
 
-	<!-- Nav -->
+        <!-- Nav -->
         <nav id="menu">
             <ul class="links">
                 <li><a href="index.php"> Mon profil </a></li>
@@ -70,7 +70,7 @@ while ($resultat = $requete->fetch_assoc()) {
             </ul>
         </nav>
 
-	<!-- Main -->
+        <!-- Main -->
 
         <section class="profil">
             <a href="../index.php">
@@ -89,7 +89,7 @@ while ($resultat = $requete->fetch_assoc()) {
                             <h2> <?php echo $_SESSION['username']; ?> </h2>
                         </div>
                         <div class="block_img">
-                            <img src="../images/modifierImg.png"/>
+                            <img src="../images/modifierImg.png" />
                         </div>
 
                     </div>
@@ -98,10 +98,10 @@ while ($resultat = $requete->fetch_assoc()) {
                 <div class="infos_perso">
                     <div class="group_infosPerso">
                         <div>
-                            <p> Adresse mail  : <?php echo $email; ?> </p>
+                            <p> Adresse mail : <?php echo $email; ?> </p>
                         </div>
                         <div class="block_img">
-                            <img src="../images/modifierImg.png"/>
+                            <img src="../images/modifierImg.png" />
                         </div>
                     </div>
                     <div class="group_infosPerso">
@@ -109,80 +109,80 @@ while ($resultat = $requete->fetch_assoc()) {
                             <p> Mot de passe : **********</p>
                         </div>
                         <div class="block_img">
-                            <img src="../images/modifierImg.png"/>
+                            <img src="../images/modifierImg.png" />
                         </div>
                     </div>
                     <div class="group_infosPerso">
                         <div>
-                            <p> Code postal  : <?php echo $cp; ?> </p>
+                            <p> Code postal : <?php echo $cp; ?> </p>
                         </div>
                         <div class="block_img">
-                            <img src="../images/modifierImg.png"/>
+                            <img src="../images/modifierImg.png" />
                         </div>
                     </div>
                     <div class="group_infosPerso">
                         <div>
-                            <p> Ville  : <?php echo $city; ?> </p>
+                            <p> Ville : <?php echo $city; ?> </p>
                         </div>
                         <div class="block_img">
-                            <img src="../images/modifierImg.png"/>
+                            <img src="../images/modifierImg.png" />
                         </div>
                     </div>
                 </div>
 
                 <section class="listeMesPublications">
-            <h2 class="title_mespubli"> Mes propositions </h2>
-            <div>
+                    <h2 class="title_mespubli"> Mes propositions </h2>
+                    <div>
 
-                <?php
+                        <?php
 
-                require("../bdd/dbSet.php");
-
-
-                if (isset($_SESSION['username'])) {
-                    $username = $_SESSION['username'];
-                }
-
-                if (isset($_POST['reg_posts'])) {
-                    // receive all input values from the form
-                    $commentaire = mysqli_real_escape_string($db, $_POST['commentaire']);
-                    $photo = mysqli_real_escape_string($db, $_POST['photo']);
+                        require("../bdd/dbSet.php");
 
 
-                    $query = "INSERT INTO posts (photo, commentaire, email) 
+                        if (isset($_SESSION['username'])) {
+                            $username = $_SESSION['username'];
+                        }
+
+                        if (isset($_POST['reg_posts'])) {
+                            // receive all input values from the form
+                            $commentaire = mysqli_real_escape_string($db, $_POST['commentaire']);
+                            $photo = mysqli_real_escape_string($db, $_POST['photo']);
+
+
+                            $query = "INSERT INTO posts (photo, commentaire, email) 
         VALUES ('$photo', '$commentaire', '$username')";
-                    mysqli_query($db, $query);
-                }
-                $sql = "SELECT commentaire, photo, posts.id FROM posts, users WHERE posts.email = users.username and users.username = '$username' ORDER BY posts.id DESC";
-                $requete = $db->query($sql);
+                            mysqli_query($db, $query);
+                        }
+                        $sql = "SELECT commentaire, photo, posts.id FROM posts, users WHERE posts.email = users.username and users.username = '$username' ORDER BY posts.id DESC";
+                        $requete = $db->query($sql);
 
-                ?>
-                <div class="listePublications">
-                    <?php
-                    $numeroProjet = 1;
-                    while ($resultat = $requete->fetch_assoc()) {
-                        $commentaire = $resultat['commentaire'];
-                        $photo = $resultat['photo'];
-                        $id = $resultat['id'];
-                    ?>
-                        <div class="card_publi">
-                            <?php echo '<img src=../images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
-                            <div class="card_contenu">
-                                <h5 class="card_title">Projet n°<?php echo $id ?></h5>
-                                <p class="card_text" style="color:#222222;"><?php echo $commentaire ?> </p>
-                            </div>
-                            <p class="nbVotes" style="color:#222222;font-style:italic;"> 200 validations sur 230 votes</p>
+                        ?>
+                        <div class="listePublications">
+                            <?php
+                            $numeroProjet = 1;
+                            while ($resultat = $requete->fetch_assoc()) {
+                                $commentaire = $resultat['commentaire'];
+                                $photo = $resultat['photo'];
+                                $id = $resultat['id'];
+                            ?>
+                                <div class="card_publi">
+                                    <?php echo '<img src=../images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
+                                    <div class="card_contenu">
+                                        <h5 class="card_title">Projet n°<?php echo $id ?></h5>
+                                        <p class="card_text" style="color:#222222;"><?php echo $commentaire ?> </p>
+                                    </div>
+                                    <p class="nbVotes" style="color:#222222;font-style:italic;"> 200 validations sur 230 votes</p>
+                                </div>
+
+                            <?php
+                                $numeroProjet = $numeroProjet + 1;
+                            }
+
+                            ?>
                         </div>
-
-                    <?php
-                        $numeroProjet = $numeroProjet + 1;
-                    }
-
-                    ?>
-            </div>
-            </div>
-        </section>
-                <?php endif ?>
+                    </div>
+                </section>
+            <?php endif ?>
 
         </section>
     </div>
@@ -195,4 +195,3 @@ while ($resultat = $requete->fetch_assoc()) {
 
 
 </html>
-

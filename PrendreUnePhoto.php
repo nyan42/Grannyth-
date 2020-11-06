@@ -18,28 +18,28 @@
 <body>
 	<div id="root">
 
-    <!-- Header -->
-    <header id="header">
-        <a class="logo logo_nm" href="index.php">
-            <img src="images/SmartCitizen_blanc.png" class="logo_img" />
-        </a>
-        <nav>
-            <a href="#menu"></a>
-        </nav>
-    </header>
+		<!-- Header -->
+		<header id="header">
+			<a class="logo logo_nm" href="index.php">
+				<img src="images/SmartCitizen_blanc.png" class="logo_img" />
+			</a>
+			<nav>
+				<a href="#menu"></a>
+			</nav>
+		</header>
 
-    <!-- Nav -->
-    <nav id="menu">
-        <ul class="links">
-            <li><a href="registration/index.php"> Mon profil </a></li>
-            <li><a href="PrendreUnePhoto.php">Prendre une photo </a></li>
-            <li><a href="post.php">Publier une proposition </a></li>
-            <li><a href="publicationGeneral.php"> Propositions en cours </a></li>
-            <li><a href="propositionsValid.php"> Propositions validées </a></li>
-            <li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
-            <li><a href="index.php?logout='1'">Déconnexion </a></li>
-        </ul>
-    </nav>
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="registration/index.php"> Mon profil </a></li>
+				<li><a href="PrendreUnePhoto.php">Prendre une photo </a></li>
+				<li><a href="post.php">Publier une proposition </a></li>
+				<li><a href="publicationGeneral.php"> Propositions en cours </a></li>
+				<li><a href="propositionsValid.php"> Propositions validées </a></li>
+				<li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
+				<li><a href="index.php?logout='1'">Déconnexion </a></li>
+			</ul>
+		</nav>
 
 		<section class="prendre_photo" id="main">
 			<a href="./index.php">
@@ -56,13 +56,13 @@
 			</div>
 		</section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</div>
 </body>
 
 </html>

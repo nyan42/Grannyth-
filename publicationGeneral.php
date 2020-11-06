@@ -6,46 +6,47 @@
 -->
 <html>
 <?php
-                            require ("bdd/dbSet.php");
+require("bdd/dbSet.php");
 
-                            if(isset($_GET['id'])){
-                                $id = $_GET['id'];
-                                $sql = "SELECT  nbValide, nbInvalide FROM posts WHERE id = '$id'";
-                            $requete = $db->query($sql);
-                                while ($resultat = $requete->fetch_assoc()) {
-                                    $nbValide = $resultat['nbValide'];
-                                    $nbInvalide = $resultat['nbInvalide'];
-                                }
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "SELECT  nbValide, nbInvalide FROM posts WHERE id = '$id'";
+    $requete = $db->query($sql);
+    while ($resultat = $requete->fetch_assoc()) {
+        $nbValide = $resultat['nbValide'];
+        $nbInvalide = $resultat['nbInvalide'];
+    }
 
-                            if (isset($_POST['reg_oui'])) {
-                                // receive all input values from the form
-                                $requete = $db->query("SELECT nbValide FROM posts Where id = '$id'");
-                                while ($resultat = $requete->fetch_assoc()) {
-                                    $nbValide = $resultat['nbValide'];
-                                }
-                                $nbValide += 1;
-                                $query = "UPDATE posts
+    if (isset($_POST['reg_oui'])) {
+        // receive all input values from the form
+        $requete = $db->query("SELECT nbValide FROM posts Where id = '$id'");
+        while ($resultat = $requete->fetch_assoc()) {
+            $nbValide = $resultat['nbValide'];
+        }
+        $nbValide += 1;
+        $query = "UPDATE posts
                                 SET nbValide = '$nbValide'
                                 WHERE id = '$id'";
-                                mysqli_query($db, $query);
-                            }
+        mysqli_query($db, $query);
+    }
 
 
-                            if (isset($_POST['reg_non'])) {
-                                // receive all input values from the form
-                                $requete = $db->query("SELECT nbInvalide FROM posts Where id = '$id'");
-                                while ($resultat = $requete->fetch_assoc()) {
-                                    $nbInvalide = $resultat['nbInvalide'];
-                                }
-                                $nbInvalide += 1;
-                                $query = "UPDATE posts
+    if (isset($_POST['reg_non'])) {
+        // receive all input values from the form
+        $requete = $db->query("SELECT nbInvalide FROM posts Where id = '$id'");
+        while ($resultat = $requete->fetch_assoc()) {
+            $nbInvalide = $resultat['nbInvalide'];
+        }
+        $nbInvalide += 1;
+        $query = "UPDATE posts
                                 SET nbInvalide = '$nbInvalide'
                                 WHERE id = '$id'";
-                                mysqli_query($db, $query);
-                            }
-                            }
-                            
-                            ?>
+        mysqli_query($db, $query);
+    }
+}
+
+?>
+
 <head>
     <title>Publications</title>
     <meta charset="utf-8" />
@@ -122,7 +123,7 @@
                         $id = $resultat['id'];
                         $nbValide = $resultat['nbValide'];
                         $nbInvalide = $resultat['nbInvalide'];
-                        ?>
+                    ?>
 
                         <div class="card_publi">
                             <?php echo '<img src=images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
@@ -149,9 +150,10 @@
                                 </form>
                             </div>
 
-                            <p class="nbVotes"><?php echo $nbValide; ?> / <?php $nbvotes = $nbValide + $nbInvalide; echo $nbvotes ?> personnes pensent que oui. </p>
+                            <p class="nbVotes"><?php echo $nbValide; ?> / <?php $nbvotes = $nbValide + $nbInvalide;
+                                                                            echo $nbvotes ?> personnes pensent que oui. </p>
                         </div>
-                        <?php
+                    <?php
                         $numeroProjet = $numeroProjet + 1;
                     }
 
@@ -163,8 +165,8 @@
 
 
 
-    <!-- Footer -->
-  <!--  <footer id="footer">
+        <!-- Footer -->
+        <!--  <footer id="footer">
         <div class="inner">
             <div class="content">
                 <section>
@@ -196,14 +198,14 @@
         </div>
     </footer>-->
 
-    <!-- Scripts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- Scripts -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
     </div>
 </body>

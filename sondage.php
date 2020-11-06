@@ -36,4 +36,3 @@
                                 WHERE id = '$id'";
                                 mysqli_query($db, $query);
                             }
-                            ?>
