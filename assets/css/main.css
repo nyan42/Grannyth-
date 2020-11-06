@@ -528,9 +528,13 @@ html {
   font-size: 1.3rem;
 }
 
+.card_title p:first-child{
+  font-weight: 600;
+}
+
 .card_title p:last-child{
-  margin-left: 1vw;
-  font-style: italic;
+  margin-left: 2vw;
+
 }
 
 .card_img{
@@ -587,6 +591,7 @@ html {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  height: 80%;
 }
 
 .button_CTA_vote{
@@ -605,6 +610,12 @@ html {
 .nbVotes{
   margin-left: 4vw;
   padding-bottom: 2vh;
+  font-size: 0.8rem;
+}
+
+.block_votes{
+  display: flex;
+  justify-content: space-around;
 }
 
 
