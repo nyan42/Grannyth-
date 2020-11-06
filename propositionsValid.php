@@ -53,8 +53,8 @@
                     <img src="images/skatepark.jpg" class="card_img" alt="skatepark" />
                     <div class="card_contenu">
                         <div class="card_title">
-                            <p> Projet n°2 par </p>
-                            <p> Tom </p>
+                            <p> Projet n°2 </p>
+                            <p> - Tom </p>
                         </div>
                         <p class="card_text"> Création d'un skatepark à l'angle de Road Street avenue pour les petits et grands. Avec de quoi faire du skate, du roller et du vélo tout en sécurité.</p>
                     </div>
@@ -64,8 +64,8 @@
                     <img src="images/abribus.jpg" class="card_img" alt="abribus" />
                     <div class="card_contenu">
                         <div class="card_title">
-                            <p> Projet n°6 par </p>
-                            <p> Sonia </p>
+                            <p> Projet n°6 </p>
+                            <p> - Sonia </p>
                         </div>
                         <p class="card_text"> Restauration d'un abri-bus délabré que mes enfants utilisent tous les jours. Ils ne sont même pas protégés de la pluie et la neige.</p>
                     </div>
