@@ -153,7 +153,7 @@ while ($resultat = $requete->fetch_assoc()) {
         VALUES ('$photo', '$commentaire', '$username')";
                             mysqli_query($db, $query);
                         }
-                        $sql = "SELECT commentaire, photo, posts.id FROM posts, users WHERE posts.email = users.username and users.username = '$username' ORDER BY posts.id DESC";
+                        $sql = "SELECT commentaire, photo, posts.id, nbValide, nbInvalide FROM posts, users WHERE posts.email = users.username and users.username = '$username' ORDER BY posts.id DESC";
                         $requete = $db->query($sql);
 
                         ?>
@@ -164,6 +164,8 @@ while ($resultat = $requete->fetch_assoc()) {
                                 $commentaire = $resultat['commentaire'];
                                 $photo = $resultat['photo'];
                                 $id = $resultat['id'];
+                                $nbValide = $resultat['nbValide'];
+                                $nbInvalide = $resultat['nbInvalide'];
                             ?>
                                 <div class="card_publi">
                                     <?php echo '<img src=../images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
@@ -171,8 +173,18 @@ while ($resultat = $requete->fetch_assoc()) {
                                         <h5 class="card_title">Projet n°<?php echo $id ?></h5>
                                         <p class="card_text" style="color:#222222;"><?php echo $commentaire ?> </p>
                                     </div>
-                                    <p class="nbVotes" style="color:#222222;font-style:italic;"> 200 validations sur 230 votes</p>
+                                    <p class="nbVotes" style="color:#222222;font-style:italic;"> <?php echo $nbValide; ?> / <?php $nbvotes = $nbValide + $nbInvalide;
+                                                                            echo $nbvotes ?> personnes pensent que oui. </p>
                                 </div>
+                                <?php
+                                    $sql = "SELECT email, city, cp FROM users WHERE username = '$username'";
+                                    $requete = $db->query($sql);
+                                    while ($resultat = $requete->fetch_assoc()) {
+                                        $email = $resultat['email'];
+                                        $city = $resultat['city'];
+                                        $cp = $resultat['cp'];
+                                    } 
+                                ?>
 
                             <?php
                                 $numeroProjet = $numeroProjet + 1;
