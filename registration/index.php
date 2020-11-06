@@ -184,7 +184,7 @@ while ($resultat = $requete->fetch_assoc()) {
         VALUES ('$photo', '$commentaire', '$username')";
                     mysqli_query($db, $query);
                 }
-                $sql = "SELECT commentaire, photo FROM posts, users WHERE posts.email = users.username and users.username = '$username'";
+                $sql = "SELECT commentaire, photo, posts.id FROM posts, users WHERE posts.email = users.username and users.username = '$username' ORDER BY posts.id DESC";
                 $requete = $db->query($sql);
 
                 ?>
@@ -194,11 +194,12 @@ while ($resultat = $requete->fetch_assoc()) {
                     while ($resultat = $requete->fetch_assoc()) {
                         $commentaire = $resultat['commentaire'];
                         $photo = $resultat['photo'];
+                        $id = $resultat['id'];
                     ?>
                         <div class="card_publi">
                             <?php echo '<img src=../images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
                             <div class="card_contenu">
-                                <h5 class="card_title">Projet n°<?php echo $numeroProjet ?></h5>
+                                <h5 class="card_title">Projet n°<?php echo $id ?></h5>
                                 <p class="card_text" style="color:#222222;"><?php echo $commentaire ?> </p>
                             </div>
                             <p class="nbVotes" style="color:#222222;font-style:italic;"> 200 validations sur 230 votes</p>
