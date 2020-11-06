@@ -109,7 +109,7 @@ if (isset($_GET['id'])) {
                                 VALUES ('$photo', '$commentaire', '$username', 0,0)";
                     mysqli_query($db, $query);
                 }
-                $sql = "SELECT commentaire, photo, email, id, nbValide, nbInvalide FROM posts";
+                $sql = "SELECT commentaire, photo, email, id, nbValide, nbInvalide FROM posts ORDER BY id DESC";
                 $requete = $db->query($sql);
 
                 ?>
@@ -129,7 +129,7 @@ if (isset($_GET['id'])) {
                             <?php echo '<img src=images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
                             <div class="card_contenu">
                                 <div class="card_title">
-                                    <p> Projet n°<?php echo $numeroProjet ?></p>
+                                    <p> Projet n°<?php echo $id ?></p>
                                     <p> - <?php echo $email ?> </p>
                                 </div>
                                 <p class="card_text"><?php echo $commentaire ?> </p>
