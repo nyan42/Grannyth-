@@ -104,8 +104,8 @@
                     $photo = mysqli_real_escape_string($db, $_POST['photo']);
 
 
-                    $query = "INSERT INTO posts (photo, commentaire, email, estValide) 
-                                VALUES ('$photo', '$commentaire', '$username', 'oui')";
+                    $query = "INSERT INTO posts (photo, commentaire, email, nbValide, nbInvalide) 
+                                VALUES ('$photo', '$commentaire', '$username', 0,0)";
                     mysqli_query($db, $query);
                 }
                 $sql = "SELECT commentaire, photo, email, id, nbValide, nbInvalide FROM posts";
