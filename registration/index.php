@@ -60,48 +60,17 @@ while ($resultat = $requete->fetch_assoc()) {
 	<!-- Nav -->
         <nav id="menu">
             <ul class="links">
-                <li><a href="registration/index.php"> Mon profil </a></li>
-                <li><a href="PrendreUnePhoto.php">Prendre une photo </a></li>
-                <li><a href="post.php">Publier une proposition </a></li>
-                <li><a href="publicationGeneral.php"> Propositions en cours </a></li>
-                <li><a href="propositionsValid.php"> Propositions validées </a></li>
+                <li><a href="index.php"> Mon profil </a></li>
+                <li><a href="../PrendreUnePhoto.php">Prendre une photo </a></li>
+                <li><a href="../post.php">Publier une proposition </a></li>
+                <li><a href="../publicationGeneral.php"> Propositions en cours </a></li>
+                <li><a href="../propositionsValid.php"> Propositions validées </a></li>
                 <li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
                 <li><a href="index.php?logout='1'">Déconnexion </a></li>
             </ul>
         </nav>
 
 	<!-- Main -->
-	<!--<section id="main" class="wrapper">
-		<div class="inner">
-			<div class="content">
-				<div class="container">
-
-					<div class="connexion">-->
-						<!-- notification message -->
-						<?php if (isset($_SESSION['success'])) : ?>
-							<!--<div class="error success">
-								<h3>
-									<?php
-									echo $_SESSION['success'];
-									unset($_SESSION['success']);
-									?>
-								</h3>
-							</div>-->
-						<?php endif ?>
-
-						<!-- logged in user information -->
-						<?php if (isset($_SESSION['username'])) : ?>
-							<!--<p>Bonjour <strong><?php echo $_SESSION['username']; ?></strong></p>
-							<p> <a href="../index.php" style="color: red;">menu principal</a> </p>
-							<p> <a href="../publication.php" style="color: red;">mes projets</a> </p>
-							<p> <a href="index.php?logout='1'" style="color: red;">déconnnexion</a> </p>-->
-						<?php endif ?>
-					<!--</div>
-				</div>
-
-			</div>
-		</div>
-	</section>-->
 
         <section class="profil">
             <a href="../index.php">
