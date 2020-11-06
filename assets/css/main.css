@@ -136,11 +136,14 @@ html {
 }
 
 .logo_nm{
-  margin-top: 1.5vh;
+
 }
 
 .logo_img{
-  width: 14%;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #header>nav>a[href="#menu"]:before{
@@ -4618,6 +4621,8 @@ body:before {
   line-height: inherit;
   padding: 0 1.25rem;
   text-decoration: none;
+  width: 20%;
+  margin-top: 1.5vh;
 }
 
 #header>nav>a {
