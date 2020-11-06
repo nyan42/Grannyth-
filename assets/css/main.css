@@ -587,6 +587,7 @@ html {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  height: 80%;
 }
 
 .button_CTA_vote{
@@ -605,6 +606,12 @@ html {
 .nbVotes{
   margin-left: 4vw;
   padding-bottom: 2vh;
+  font-size: 0.8rem;
+}
+
+.block_votes{
+  display: flex;
+  justify-content: space-around;
 }
 
 

@@ -58,40 +58,28 @@
 <body>
     <div id="root">
 
-    <!-- Header -->
-    <header id="header">
-        <a class="logo" href="index.php">SmartCityzen</a>
-        <nav>
-            <a href="#menu">Menu</a>
-        </nav>
-    </header>
-
-    <!-- Nav -->
-    <nav id="menu">
-        <ul class="links">
-            <li><a href="index.php">Home</a></li>
-        </ul>
-    </nav>
-
-    <!-- Heading -->
-   <!-- <div id="heading">
-        <h1>Publications</h1>
-    </div>-->
-
-    <!-- Main -->
-   <!-- <section id="main" class="wrapper">
-
-        <div class="inner">
-            <a href="./index.php">
-                <img src="images/flecheRetour.png" class="img_retour" />
+        <!-- Header -->
+        <header id="header">
+            <a class="logo logo_nm" href="index.php">
+                <img src="images/SmartCitizen_blanc.png" class="logo_img" />
             </a>
+            <nav>
+                <a href="#menu"></a>
+            </nav>
+        </header>
 
-            <div class="content">
-
-                </div>
-            </div>
-        </div>
-    </section>-->
+        <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="registration/index.php"> Mon profil </a></li>
+                <li><a href="PrendreUnePhoto.php">Prendre une photo </a></li>
+                <li><a href="post.php">Publier une proposition </a></li>
+                <li><a href="publicationGeneral.php"> Propositions en cours </a></li>
+                <li><a href="propositionsValid.php"> Propositions validées </a></li>
+                <li><a href="#"> SmartCitizen, c'est quoi ? </a></li>
+                <li><a href="index.php?logout='1'">Déconnexion </a></li>
+            </ul>
+        </nav>
 
         <section class="listePublications_ville">
             <a href="./index.php">
@@ -144,21 +132,22 @@
                                 <p class="card_text"><?php echo $email ?> </p>
                             </div>
                             <p class="descVote"> Pensez-vous qu'il faut présenter cette proposition au Conseil municipal ?</p>
-                            
-                            <form method="POST" action="publicationGeneral.php?id=<?php echo $id; ?>">
-                                <div class="buttons_vote">
-                                    <button type="submit" class="button_CTA" name="reg_oui">Oui </button>
-                                </div>
 
-                            
-                            </form>
-                            <form method="POST" action="publicationGeneral.php?id=<?php echo $id; ?>">
-                                <div class="buttons_vote">
-                                    <button type="submit" class="button_CTA" name="reg_non">Non </button>
-                                </div>
-                                
-                            </form>
-                            <p><?php echo $nbValide; ?> votes valides sur <?php $nbvotes = $nbValide + $nbInvalide; echo $nbvotes ?> votes </p> 
+                            <div class="block_votes">
+                                <form method="POST" action="publicationGeneral.php?id=<?php echo $id; ?>">
+                                    <div class="buttons_vote">
+                                        <button type="submit" class="button_CTA_vote" name="reg_oui">Oui </button>
+                                    </div>
+                                </form>
+                                <form method="POST" action="publicationGeneral.php?id=<?php echo $id; ?>">
+                                    <div class="buttons_vote">
+                                        <button type="submit" class="button_CTA_vote" name="reg_non">Non </button>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <p class="nbVotes"><?php echo $nbValide; ?> / <?php $nbvotes = $nbValide + $nbInvalide; echo $nbvotes ?> personnes pensent que oui. </p>
                         </div>
                         <?php
                         $numeroProjet = $numeroProjet + 1;
