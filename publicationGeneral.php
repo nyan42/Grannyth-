@@ -68,7 +68,7 @@
         VALUES ('$photo', '$commentaire', '$username')";
                     mysqli_query($db, $query);
                 }
-                $sql = "SELECT commentaire, photo, email FROM posts";
+                $sql = "SELECT commentaire, photo, email, id FROM posts ORDER BY id DESC";
                 $requete = $db->query($sql);
 
                 ?>
@@ -79,13 +79,14 @@
                         $commentaire = $resultat['commentaire'];
                         $photo = $resultat['photo'];
                         $email = $resultat['email'];
+                        $id = $resultat['id'];
                         ?>
 
                         <div class="card_publi">
                             <?php echo '<img src=images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
                             <div class="card_contenu">
                                 <div class="card_title">
-                                    <p> Projet n°<?php echo $numeroProjet ?> par </p>
+                                    <p> Projet n°<?php echo $id ?> par </p>
                                     <p>  <?php echo $email ?> </p>
                                 </div>
                                 <p class="card_text"><?php echo $commentaire ?> </p>
