@@ -127,9 +127,11 @@
                         <div class="card_publi">
                             <?php echo '<img src=images/' . $photo . ' class="card_img"' . 'alt="' . $photo . '">' ?>
                             <div class="card_contenu">
-                                <h5 class="card_title">Projet n°<?php echo $id ?></h5>
+                                <div class="card_title">
+                                    <p> Projet n°<?php echo $numeroProjet ?></p>
+                                    <p> - <?php echo $email ?> </p>
+                                </div>
                                 <p class="card_text"><?php echo $commentaire ?> </p>
-                                <p class="card_text"><?php echo $email ?> </p>
                             </div>
                             <p class="descVote"> Pensez-vous qu'il faut présenter cette proposition au Conseil municipal ?</p>
 

@@ -528,9 +528,13 @@ html {
   font-size: 1.3rem;
 }
 
+.card_title p:first-child{
+  font-weight: 600;
+}
+
 .card_title p:last-child{
-  margin-left: 1vw;
-  font-style: italic;
+  margin-left: 2vw;
+
 }
 
 .card_img{
