@@ -176,15 +176,6 @@ while ($resultat = $requete->fetch_assoc()) {
                                     <p class="nbVotes" style="color:#222222;font-style:italic;"> <?php echo $nbValide; ?> / <?php $nbvotes = $nbValide + $nbInvalide;
                                                                             echo $nbvotes ?> personnes pensent que oui. </p>
                                 </div>
-                                <?php
-                                    $sql = "SELECT email, city, cp FROM users WHERE username = '$username'";
-                                    $requete = $db->query($sql);
-                                    while ($resultat = $requete->fetch_assoc()) {
-                                        $email = $resultat['email'];
-                                        $city = $resultat['city'];
-                                        $cp = $resultat['cp'];
-                                    } 
-                                ?>
 
                             <?php
                                 $numeroProjet = $numeroProjet + 1;
